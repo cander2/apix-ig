@@ -50,12 +50,16 @@ pages:
     title: Use Cases
   workflowoverview.md:
     title: Workflow Overview
+  apiinteractions.md:
+    title: API Interactions
   terminology.md:
     title: Terminology
   validation.md:
     title: Validation
   downloads.md:
     title: Downloads
+  references.md:
+    title: References
 #  examples.xml:
 #    title: Examples Overview
 #    simpleExamples.xml:
@@ -88,10 +92,12 @@ menu:
   IG Home: index.html
   Use Cases: usecases.html
   Workflow Overview: workflowoverview.html
+  API Interactions: apiinteractions.html
   Terminology: terminology.html
   Validation: validation.html
   Artifacts: artifacts.html
   Downloads: downloads.html
+  References: references.html
 
 # ╭───────────────────────────Less Common Implementation Guide Properties──────────────────────────╮
 # │  Uncomment the properties below to configure additional properties on the ImplementationGuide  │
