@@ -88,7 +88,7 @@ pages:
 # │ property below.                                                                                │
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
-  Table of Contents: toc.html
+#  Table of Contents: toc.html
   IG Home: index.html
   Use Cases: usecases.html
   Workflow Overview: workflowoverview.html
