@@ -57,10 +57,10 @@ pages:
 #  implementation.xml:
   downloads.md:
     title: Downloads
-  examples.xml:
-    title: Examples Overview
-    simpleExamples.xml:
-    complexExamples.xml:
+#  examples.xml:
+#    title: Examples Overview
+#    simpleExamples.xml:
+#    complexExamples.xml:
 #
 #
 # The parameters property represents IG.definition.parameter. Rather
