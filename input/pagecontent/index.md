@@ -4,7 +4,7 @@ This Implementation Guide (IG) defines how to exchange regulatory content using 
 - [Pharmaceutical Quality (Industry) IG](https://build.fhir.org/ig/HL7/uv-dx-pq/index.html)
 - [UMC IDMP Request and Publish API](https://build.fhir.org/ig/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service/index.html)
 
-The IG leverages `Bundle` (type `transaction`) for atomic submissions and `Task` for workflow coordination, suitable for company to company interactions, company to regulator interactions, and regulator to regulator interactions. 
+This IG leverages `Bundle` (type `transaction`) for atomic submissions and `Task` for workflow coordination, suitable for company to company interactions, company to regulator interactions, and regulator to regulator interactions. 
 
 ### Scope and Objective
 - **Scope**: This IG's focus is currently limited to regulated medicinal products and regulatory transactions related to ePI (a.k.a drug labeling) and PQI (a.k.a CMC) in FHIR compliant `.xml` or `.json`. Future scope expansions will include other regulated product types (e.g., veterinary, medical device, over the counter, natural health) and other regulatory content domains like adverse events (AEs) or Clinical Trial Applications/ Investigational New Drug Applications. 
@@ -42,3 +42,4 @@ The **Regulatory Content Exchange and Orchestration Network (RECON)** IG propose
 - **Modern Accessibility**: As a web-based standard, RECON aligns with global initiatives like HL7 Vulcan (ePI), HL7 PQI, and ISO IDMP, ensuring compatibility with emerging regulatory requirements and fostering global harmonization.
 
 RECON offers a modern framework that complements regulator's existing submission processes, enhancing efficiency and interoperability while addressing the complexities of regulatory content exchange.
+
