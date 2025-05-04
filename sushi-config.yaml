@@ -45,7 +45,7 @@ publisher:
 #
 pages:
   index.md:
-    title: Home
+    title: IG Home
   usecases.md:
     title: Use Cases
   workflowoverview.md:
@@ -85,7 +85,7 @@ pages:
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 menu:
   Table of Contents: toc.html
-  Home: index.html
+  IG Home: index.html
   Use Cases: usecases.html
   Workflow Overview: workflowoverview.html
   Terminology: terminology.html
