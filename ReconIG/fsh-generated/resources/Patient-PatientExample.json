@@ -1,0 +1,17 @@
+{
+  "resourceType": "Patient",
+  "id": "PatientExample",
+  "meta": {
+    "profile": [
+      "http://hl7.org/fhir/uv/recon-ig/StructureDefinition/MyPatient"
+    ]
+  },
+  "name": [
+    {
+      "given": [
+        "James"
+      ],
+      "family": "Pond"
+    }
+  ]
+}

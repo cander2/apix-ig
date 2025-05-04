@@ -1,0 +1,113 @@
+{
+  "resourceType": "ImplementationGuide",
+  "id": "hl7.fhir.uv.recon-ig",
+  "url": "http://hl7.org/fhir/uv/recon-ig/ImplementationGuide/hl7.fhir.uv.recon-ig",
+  "version": "0.1.0",
+  "name": "ReconIG",
+  "title": "Regulatory Content Exchange",
+  "status": "draft",
+  "publisher": "Gravitate Health Project",
+  "contact": [
+    {
+      "name": "Gravitate Health Project",
+      "telecom": [
+        {
+          "system": "url",
+          "value": "https://www.gravitatehealth.eu/"
+        }
+      ]
+    }
+  ],
+  "packageId": "hl7.fhir.uv.recon-ig",
+  "fhirVersion": [
+    "4.0.1"
+  ],
+  "definition": {
+    "resource": [
+      {
+        "reference": {
+          "reference": "StructureDefinition/MyPatient"
+        },
+        "name": "MyPatient",
+        "description": "An example profile of the Patient resource.",
+        "exampleBoolean": false
+      },
+      {
+        "reference": {
+          "reference": "Patient/PatientExample"
+        },
+        "name": "PatientExample",
+        "description": "An example of a patient with a license to krill.",
+        "exampleCanonical": "http://hl7.org/fhir/uv/recon-ig/StructureDefinition/MyPatient"
+      }
+    ],
+    "page": {
+      "nameUrl": "toc.html",
+      "title": "Table of Contents",
+      "generation": "html",
+      "page": [
+        {
+          "nameUrl": "index.html",
+          "title": "Home",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "usecases.html",
+          "title": "Use Cases",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "workflowoverview.html",
+          "title": "Workflow Overview",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "terminology.html",
+          "title": "Terminology",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "validation.html",
+          "title": "Validation",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "downloads.html",
+          "title": "Downloads",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "examples.html",
+          "title": "Examples Overview",
+          "generation": "html",
+          "page": [
+            {
+              "nameUrl": "simpleExamples.html",
+              "title": "Simple Examples",
+              "generation": "html"
+            },
+            {
+              "nameUrl": "complexExamples.html",
+              "title": "Complex Examples",
+              "generation": "html"
+            }
+          ]
+        }
+      ]
+    },
+    "parameter": [
+      {
+        "code": "copyrightyear",
+        "value": "2025+"
+      },
+      {
+        "code": "releaselabel",
+        "value": "ci-build"
+      },
+      {
+        "code": "path-history",
+        "value": "http://hl7.org/fhir/uv/recon-ig/history.html"
+      }
+    ]
+  }
+}
