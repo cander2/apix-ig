@@ -6,14 +6,21 @@ This Implementation Guide (IG) defines how to exchange regulatory content using 
 
 This IG leverages `Bundle` (type `transaction`) for atomic submissions and `Task` for workflow coordination, suitable for company to company interactions, company to regulator interactions, and regulator to regulator interactions. 
 
+### Goals
+- **Efficiency**: Streamline submission processes, reducing manual effort, reducing administrative delays compared to traditional file-based systems.
+- **Interoperability**: Ensure content is machine-readable and compatible across systems, supporting global regulatory harmonization.
+- **Modernization**: Address the limitations of antiquated file-based systems (e.g., paper/electronic paper, one-way workflows and systems).
+- **Innovation**: Create an innovation and AI friendly framework using based web standards and a strong focus on being fast and easy to implement.
+
+
 ### Scope and Objective
 - **Scope**: This IG's focus is currently limited to regulated medicinal products and regulatory transactions related to ePI (a.k.a drug labeling) and PQI (a.k.a CMC) in FHIR compliant `.xml` or `.json`. Future scope expansions will include other regulated product types (e.g., veterinary, medical device, over the counter, natural health) and other regulatory content domains like adverse events (AEs) or Clinical Trial Applications/ Investigational New Drug Applications. 
-- **Objective**: Enable interoperable exchange of regulatory content, including ePI (as `Bundle` type `document` in `.xml` or `.json`) and PQI data (e.g., quality test results, batch analysis), with application forms and legacy documents as PDFs via `DocumentReference`.
+- **Objective**: Describe a framework for interoperable exchange of regulatory content, including ePI (as `Bundle` type `document` in `.xml` or `.json`) and PQI data (e.g., quality test results, batch analysis), with application forms and legacy documents as PDFs via `DocumentReference`.
 - **Use Case**: A pharmaceutical company submits an ePI update and PQI update (e.g., shelf life extension) to a regulator with a `Task` to track review and approval.
 - **Stakeholders**: Regulators, pharmaceutical companies, FHIR server vendors, structured/component authoring vendors.
 - **Resources**: `DocumentReference` (for PDFs or referencing `Bundle` type `document`), `Observation` (for PQI data), `Task` (for workflow), `Bundle` (type `transaction` and `document`).
 - **Compliance**: Aligns with ISO IDMP, HL7 Vulcan ePI, and HL7 PQI standards.
-- **Branding**: Branded as **RECON** to emphasize regulatory content exchange and workflow orchestration, with a subtitle highlighting initial scope focus on drug labeling and pharmaceutical quality.
+- **Branding**: Branded as **RECON** to emphasize regulatory content exchange and coordinated workflow system (orchestration) that manages the lifecycle of regulatory submissions using Task for clear, trackable processes.
 
 ### Pre-requisites
 - **Tools**: Text editor (e.g., VS Code), Git, GitHub for hosting, HAPI FHIR Validator CLI (optional).
