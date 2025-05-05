@@ -25,7 +25,7 @@ This IG leverages `Bundle` (type `transaction`) for atomic submissions and `Task
 ### Pre-requisites
 - **Tools**: Text editor (e.g., VS Code), Git, GitHub for hosting, HAPI FHIR Validator CLI (optional).
 - **FHIR Knowledge**: Familiarity with `Bundle` (type `transaction` and `document`), `Task`, `DocumentReference`, and `Observation` in FHIR R5.
-- **Infrastructure**: Access to a FHIR R5 server (e.g., HAPI FHIR, Kodjin FHIR Server). For R4 compatibility, test with R4 servers.
+- **Infrastructure**: Access to a FHIR R5 server (e.g., HAPI FHIR, Kodjin FHIR Server).
 - **Security**: Implement SMART on FHIR and OAuth2 for all API interactions.
 
 ### Background
