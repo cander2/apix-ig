@@ -10,7 +10,7 @@ This IG leverages `Bundle` (type `transaction`) for atomic submissions and `Task
 - **Efficiency**: Streamline submission processes, reducing manual effort, reducing administrative delays compared to traditional file-based systems.
 - **Interoperability**: Ensure content is machine-readable and compatible across systems, supporting global regulatory harmonization.
 - **Modernization**: Address the limitations of antiquated file-based systems (e.g., paper/electronic paper, one-way workflows and systems).
-- **Innovation**: Create an innovation and AI friendly framework using based web standards and a strong focus on being fast and easy to implement.
+- **Innovation**: Create an innovation and AI friendly framework using web standards and a strong focus on being fast and easy to implement.
 
 
 ### Scope and Objective
