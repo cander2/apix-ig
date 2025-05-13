@@ -50,6 +50,8 @@ pages:
     title: Use Cases
   workflowoverview.md:
     title: Workflow Overview
+	examples.md:
+		title: Examples
   apiinteractions.md:
     title: API Interactions
   terminology.md:
@@ -92,6 +94,7 @@ menu:
   IG Home: index.html
   Use Cases: usecases.html
   Workflow Overview: workflowoverview.html
+	Examples: examples.html
   API Interactions: apiinteractions.html
   Terminology: terminology.html
   Validation: validation.html
