@@ -1,9 +1,4 @@
-# Workflow Overview - Regulatory Content Exchange and Orchestration Network (RECON) v0.1.0
-
-**Regulatory Content Exchange and Orchestration Network (RECON)**  
-**Version**: 0.1.0 - ci-build  
-**Publisher**: Gravitate Health Project  
-**Status**: This guide is not an authorized publication; it is a continuous build for version 0.1.0, based on the content available at [https://github.com/cander2/recon-ig/](https://github.com/cander2/recon-ig/). See the [Directory of published versions](https://build.fhir.org/ig/cander2/recon-ig/history.html) for more details.
+# Workflow Overview
 
 ## Table of Contents
 - [Overview](#overview)
