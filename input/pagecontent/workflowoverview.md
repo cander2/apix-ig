@@ -1,22 +1,8 @@
-# Workflow Overview
-
-## Table of Contents
-- [Overview](#overview)
-- [Workflow Steps](#workflow-steps)
-- [Identifying Sender and Recipient](#identifying-sender-and-recipient)
-- [Security and Privacy](#security-and-privacy)
-- [Error Handling](#error-handling)
-- [Conformance and Extensibility](#conformance-and-extensibility)
-- [Diagram](#diagram)
-- [Examples](#examples)
-- [Next Steps for Implementers](#next-steps-for-implementers)
-- [Feedback](#feedback)
-
-## Overview
+### Overview
 
 The RECON workflow facilitates the exchange and orchestration of regulatory content, such as electronic Product Information (ePI) and Product Quality Information (PQI), between submitters (e.g., pharmaceutical companies) and regulators. The process leverages FHIR resources, primarily `Task`, `DocumentReference`, `Observation`, and `Provenance`, to manage submissions, processing, updates, and notifications. This guide outlines the workflow, sender/recipient identification, security considerations, and implementation details.
 
-## Workflow Steps
+### Workflow Steps
 
 1. **Submission**  
    - **Action**: The submitter creates a FHIR `Transaction Bundle` containing:  
@@ -53,7 +39,7 @@ The RECON workflow facilitates the exchange and orchestration of regulatory cont
      - The submitter retrieves the updated `Task` and its `output` (e.g., `OperationOutcome` or revised `DocumentReference`).  
      - Subscriptions may use REST-hook, WebSocket, or email channels, as defined in the server’s `CapabilityStatement`.
 
-## Identifying Sender and Recipient
+### Identifying Sender and Recipient
 
 To ensure proper routing and auditability, RECON transaction bundles must clearly identify the sender (submitter) and recipient (regulator) of the submission. This is achieved through FHIR resources and security mechanisms:
 
@@ -79,14 +65,14 @@ To ensure proper routing and auditability, RECON transaction bundles must clearl
 
 For detailed resource constraints, see the [RECON Task Profile](https://build.fhir.org/ig/cander2/recon-ig/StructureDefinition-recon-task.html), [RECON Provenance Profile](https://build.fhir.org/ig/cander2/recon-ig/StructureDefinition-recon-provenance.html), and [RECON Organization Profile](https://build.fhir.org/ig/cander2/recon-ig/StructureDefinition-recon-organization.html).
 
-## Security and Privacy
+### Security and Privacy
 
 - All interactions must use HTTPS.  
 - Authentication and authorization follow SMART-on-FHIR or OAuth 2.0 standards.  
 - Sensitive data in `DocumentReference` or `Observation` resources should be encrypted or access-controlled.  
 - Servers must log sender and recipient details (via `Provenance` or audit events) for regulatory compliance.
 
-## Error Handling
+### Error Handling
 
 - Servers must return `OperationOutcome` resources for validation errors, unauthorized access, or processing failures.  
 - Common errors include:  
@@ -94,14 +80,14 @@ For detailed resource constraints, see the [RECON Task Profile](https://build.fh
   - Mismatch between authenticated sender and `Task.requester` (`403 Forbidden`).  
   - Inaccessible tasks or resources (`404 Not Found` or `403 Forbidden`).  
 
-## Conformance and Extensibility
+### Conformance and Extensibility
 
 - Implementers must adhere to RECON-specific FHIR profiles (see [StructureDefinition](https://build.fhir.org/ig/cander2/recon-ig/profiles.html)).  
 - Servers must publish a `CapabilityStatement` detailing supported operations, search parameters, and subscription channels.  
 - The workflow supports additional resources (e.g., `Composition` for structured ePI) and custom `Task.output` types.  
 - Future versions may include support for `MessageHeader` for complex message exchanges.
 
-## Diagram
+### Diagram
 
 The following UML sequence diagram illustrates the RECON workflow:
 
