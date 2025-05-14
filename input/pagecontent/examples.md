@@ -88,4 +88,78 @@ This `Transaction Bundle` submits an ePI document, identifying the sender (`Phar
       "request": {"method": "POST", "url": "Organization"}
     }
   ]
-}```
+}
+
+### Example 2: Task Update Bundle
+
+This Transaction Bundle updates a Task to completed status with an OperationOutcome output, indicating approval of the ePI.
+
+```json
+{
+  "resourceType": "Bundle",
+  "type": "transaction",
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "Task",
+        "id": "task-123",
+        "status": "completed",
+        "intent": "order",
+        "requester": {"reference": "Organization/pharma-co-123"},
+        "owner": {"reference": "Organization/regulator-456"},
+        "output": [
+          {
+            "type": {"coding": [{"system": "http://hl7.org/fhir/task-output-type", "code": "result"}]},
+            "valueReference": {"reference": "OperationOutcome/oo-123"}
+          }
+        ]
+      },
+      "request": {"method": "PUT", "url": "Task/task-123"}
+    },
+    {
+      "resource": {
+        "resourceType": "OperationOutcome",
+        "id": "oo-123",
+        "issue": [{"severity": "information", "code": "informational", "details": {"text": "ePI approved"}}]
+      },
+      "request": {"method": "POST", "url": "OperationOutcome"}
+    }
+  ]
+}
+
+### Example 3: Subscription for Notifications
+
+This Subscription resource enables real-time notifications for task updates, using a REST-hook channel.
+
+```json
+{
+  "resourceType": "Subscription",
+  "status": "requested",
+  "criteria": "Task?status=completed",
+  "channel": {
+    "type": "rest-hook",
+    "endpoint": "https://submitter.example.com/notification",
+    "payload": "application/fhir+json"
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
