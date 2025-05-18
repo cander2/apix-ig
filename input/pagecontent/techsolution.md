@@ -1,5 +1,3 @@
-# Streaming Solution
-
 ## Overview
 
 The Regulatory Content Exchange and Orchestration Network (RECON) enables seamless exchange of regulatory submissions between stakeholders, including regulatory authorities (e.g., global health agencies) and pharmaceutical companies. To manage the high volume of submission data—such as electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), and clinical datasets—RECON employs a streaming solution using Apache Kafka and JSON streaming. This page outlines the streaming architecture, its integration with FHIR Transaction Bundles, and implementation guidance for processing large-scale regulatory data in JSON format, including CDISC Dataset-JSON for clinical submissions.
@@ -47,7 +45,7 @@ The RECON streaming solution leverages Apache Kafka, a distributed streaming pla
 - **Libraries**:
   - Python: `ijson` for parsing large JSON datasets.
   - Node.js: `JSONStream` for incremental processing.
-- **Example (Python Producer)**:
+- ** Example (Python Producer)**:
   ```python
   from kafka import KafkaProducer
   import json
@@ -75,7 +73,7 @@ The RECON streaming solution leverages Apache Kafka, a distributed streaming pla
   producer.send('recon-submissions', bundle)
   producer.flush()
 
-###Example (Python Consumer):
+### Example (Python Consumer):
 from kafka import KafkaConsumer
 from jsonschema import validate
 import json
@@ -106,24 +104,24 @@ for message in consumer:
         producer.send('recon-validation-errors', {"error": str(e), "bundle": message.value})
 
 ### Performance
-•  **Throughput**: A 5-node Kafka cluster processes ~1GB/s, handling 100GB/day (typical compressed JSON volume for large regulatory workflows) in ~100 seconds.
-•  **Latency**: Sub-second validation and storage with parallel consumers.
-•  **Scalability**: Add brokers or partitions to manage peak submission periods (e.g., annual renewals).
+- **Throughput**: A 5-node Kafka cluster processes ~1GB/s, handling 100GB/day (typical compressed JSON volume for large regulatory workflows) in ~100 seconds.
+- **Latency**: Sub-second validation and storage with parallel consumers.
+- **Scalability**: Add brokers or partitions to manage peak submission periods (e.g., annual renewals).
 ### Dataset-JSON Support
-•  Clinical datasets use CDISC Dataset-JSON, streamed as NDJSON for compatibility with clinical trial submissions.
-•  Validation leverages CDISC JSON Schema, integrated with the Schema Registry.
-•  Example: Stream SDTM dataset rows for real-time validation or analysis.
+- Clinical datasets use CDISC Dataset-JSON, streamed as NDJSON for compatibility with clinical trial submissions.
+- Validation leverages CDISC JSON Schema, integrated with the Schema Registry.
+- Example: Stream SDTM dataset rows for real-time validation or analysis.
 ### Security and Compliance
-•  **Encryption**: Use HTTPS for API endpoints and TLS for Kafka communication to protect sensitive data.
-•  **Validation**: Enforce JSON Schema to comply with international standards (e.g., HL7 FHIR, CDISC, ICH).
-•  **Access Control**: Implement OAuth2 or mutual TLS for producer/consumer authentication.
-•  **Auditability**: Log all events with Provenance resources; retain logs to meet regulatory audit requirements (e.g., 21 CFR Part 11, EU GMP Annex 11).
-•  **Data Integrity**: Use Kafka’s exactly-once semantics to ensure no loss or duplication of submissions.
+- **Encryption**: Use HTTPS for API endpoints and TLS for Kafka communication to protect sensitive data.
+- **Validation**: Enforce JSON Schema to comply with international standards (e.g., HL7 FHIR, CDISC, ICH).
+- **Access Control**: Implement OAuth2 or mutual TLS for producer/consumer authentication.
+- **Auditability**: Log all events with Provenance resources; retain logs to meet regulatory audit requirements (e.g., 21 CFR Part 11, EU GMP Annex 11).
+- **Data Integrity**: Use Kafka’s exactly-once semantics to ensure no loss or duplication of submissions.
 ### Deployment Considerations
-•  **Cloud**: Deploy on managed services (e.g., AWS MSK, Confluent Cloud, Azure Event Hubs) or on-premises for flexibility.
-•  **Databases**: Use Elasticsearch for real-time querying or MongoDB for JSON storage.
-•  **Monitoring**: Prometheus for metrics (e.g., submission rate, error rate); ELK stack or similar for logging JSON payloads.
-•  **Legacy Integration**: Support legacy formats (e.g., SAS XPT) by converting to Dataset-JSON using open-source tools from CDISC initiatives.
+- **Cloud**: Deploy on managed services (e.g., AWS MSK, Confluent Cloud, Azure Event Hubs) or on-premises for flexibility.
+- **Databases**: Use Elasticsearch for real-time querying or MongoDB for JSON storage.
+- **Monitoring**: Prometheus for metrics (e.g., submission rate, error rate); ELK stack or similar for logging JSON payloads.
+- **Legacy Integration**: Support legacy formats (e.g., SAS XPT) by converting to Dataset-JSON using open-source tools from CDISC initiatives.
 ### Example Use Case
 **Scenario**: A pharmaceutical company submits an ePI Bundle and a Dataset-JSON clinical dataset to a regulatory authority via RECON.
 1.  **Submission**: The company’s portal publishes both to recon-submissions as NDJSON.
@@ -142,16 +140,15 @@ for message in consumer:
 4.  **Testing**: Use the RECON GitHub repository ([insert link]) to share test Bundles, schemas, and Kafka configurations.
 5.  **Scale Up**: Transition to a multi-node cluster for production, integrating with submission portals and regulatory systems.
 6.  **Interoperability**: Ensure compatibility with global standards (e.g., FHIR R4/R5, CDISC ODM) and regional requirements.
-## Resources
+### Resources
 - **Kafka**: [Apache Kafka Documentation](https://kafka.apache.org/)
 - **Schema Registry**: [Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html)
 - **FHIR**: [HL7 FHIR Bundle](http://hl7.org/fhir/bundle.html)
-- **Dataset-JSON**: [CDISC Dataset-JSON](https://www.cdisc.org/standards/dataset-json)
 - **Tools**: [ijson (Python)](https://pypi.org/project/ijson/), [JSONStream (Node.js)](https://www.npmjs.com/package/JSONStream), [kcat (CLI)](https://github.com/edenhill/kcat)
-## Future Work
-•  Integrate with GraphQL APIs for advanced querying of submission data.
-•  Support WebSockets for real-time status updates to stakeholders.
-•  Expand to additional workflows (e.g., adverse event reporting, marketing authorization applications), as outlined in RECON’s roadmap.
+### Future Work
+- Integrate with GraphQL APIs for advanced querying of submission data.
+- Support WebSockets for real-time status updates to stakeholders.
+- Expand to additional workflows (e.g., adverse event reporting, marketing authorization applications), as outlined in RECON’s roadmap.
 
 
 
