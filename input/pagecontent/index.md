@@ -7,7 +7,7 @@ last_updated: May 18, 2025
 
 # R2CS FHIR Implementation Guide: Real-time Regulatory Content Streaming
 
-## Introduction
+### Introduction
 
 This IG enables the vision of reducing pharmaceutical regulatory transaction and processing timelines from days or hours to subsecond timelines, using digitization, automation, and streaming technologies.
 
@@ -19,7 +19,7 @@ R2CS addresses the need for modern, real-time regulatory processes by:
 - **Interoperability**: Supporting global standards (HL7 FHIR, CDISC, ICH) for ePI, PQI, and clinical submissions.
 - **Scalability**: Handling high-volume submissions (e.g., ~100GB/day compressed JSON) with fault-tolerant architecture.
 
-## Scope
+### Scope
 
 R2CS targets pharmaceutical regulatory affairs, enabling:
 - **Electronic Product Information (ePI)**: FHIR-based drug labeling for submission and review.
@@ -29,7 +29,7 @@ R2CS targets pharmaceutical regulatory affairs, enabling:
 
 This IG provides technical guidance, profiles, and examples for implementing real-time regulatory exchange, with an intitial focus on medicinal products, pharmaceutical quality and drug labeling. Future iterations will expand the scope to include other regulated product types (e.g., medical devices, veterinary, over the counter, and natural health products), and other data domains (e.g., clinical and adverse event reporting).
 
-## Streaming Solution
+### Streaming Solution
 
 R2CS’s core innovation is its real-time streaming architecture, which processes FHIR Transaction Bundles and Dataset-JSON with subsecond latency. Built on Apache Kafka, the solution:
 - **Publishes Submissions**: Producers (e.g., pharma portals, regulatory gateways) send NDJSON-encoded FHIR Bundles to Kafka topics (e.g., `r2cs-submissions`).
@@ -39,7 +39,7 @@ R2CS’s core innovation is its real-time streaming architecture, which processe
 
 For detailed implementation, including Kafka setup, code examples, and performance metrics, see the [Streaming Solution](streaming.html) page.
 
-## Use Case Examples
+### Use Case Examples
 
 R2CS supports key regulatory workflows:
 1. **ePI Submission Exchanges**: A pharma company streams an ePI Document Bundle to a regulator for real-time validation and regulatory review.
@@ -47,13 +47,13 @@ R2CS supports key regulatory workflows:
 3. **Clinical Data Processing**: Dataset-JSON clinical datasets are streamed for subsecond analysis and storage.
 4. **Real-time Analytics**: Regulators monitor submission trends using Kafka Streams or Elasticsearch.
 
-## Resources
+### Resources
 
 - [ePI Implementation Guide](https://build.fhir.org/ig/HL7/emedicinal-product-info/)
 - [PQI Implementation Guide](https://build.fhir.org/ig/HL7/uv-dx-pq/)
 - [Apache Kafka Documentation](https://kafka.apache.org/)
 
-## Contact
+### Contact
 
 Contact the R2CS team at [insert contact] or contribute via the [R2CS GitHub repository]([https://github.com/cander2/recon-ig/]).
 
