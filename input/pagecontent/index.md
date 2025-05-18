@@ -1,52 +1,60 @@
-### Introduction
-This Implementation Guide (IG) defines how to exchange regulatory content using FHIR R5 compliant APIs, workflows, and infrastructure. This project is part of a program of work related to the following other FHIR projects:
-- [Electronic Medicinal Product Information (ePI)](https://build.fhir.org/ig/HL7/emedicinal-product-info/index.html)
-- [Pharmaceutical Quality (Industry) IG](https://build.fhir.org/ig/HL7/uv-dx-pq/index.html)
-- [UMC IDMP Request and Publish API](https://build.fhir.org/ig/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service/index.html)
+---
+title: R2CS FHIR Implementation Guide
+status: draft
+version: 0.2.0
+last_updated: May 18, 2025
+---
 
-This IG leverages `Bundle` (type `transaction`) for atomic submissions and `Task` for workflow coordination, suitable for company to company interactions, company to regulator interactions, and regulator to regulator interactions. 
+# R2CS FHIR Implementation Guide: Real-time Regulatory Content Streaming
 
-### Goals
-- **Efficiency**: Streamline submission processes, reducing manual effort, reducing administrative delays compared to traditional file-based systems.
-- **Interoperability**: Ensure content is machine-readable and compatible across systems, supporting global regulatory harmonization.
-- **Modernization**: Address the limitations of antiquated file-based systems (e.g., paper/electronic paper, one-way workflows and systems).
-- **Innovation**: Create an innovation and AI friendly framework using web standards and a strong focus on being fast and easy to implement.
+## Introduction
 
+This IG enables the vision of reducing regulatory transaction and processing timelines from days or hours to sub-second timelines, using digitization, automation, and streaming technologies ([Anderson, Algorri, Abernathy 2023](https://pubmed.ncbi.nlm.nih.gov/37619807/)).
 
-### Scope and Objective
-- **Scope**: This IG's focus is currently limited to regulated medicinal products and regulatory transactions related to ePI (a.k.a drug labeling) and PQI (a.k.a CMC) in FHIR compliant `.xml` or `.json`. Future scope expansions will include other regulated product types (e.g., veterinary, medical device, over the counter, natural health) and other regulatory content domains like adverse events (AEs) or Clinical Trial Applications/ Investigational New Drug Applications. 
-- **Objective**: Describe a framework for interoperable exchange of regulatory content, including ePI (as `Bundle` type `document` in `.xml` or `.json`) and PQI data (e.g., quality test results, batch analysis), with application forms and legacy documents as PDFs via `DocumentReference`.
-- **Use Case**: A pharmaceutical company submits an ePI update and PQI update (e.g., shelf life extension) to a regulator with a `Task` to track review and approval.
-- **Stakeholders**: Regulators, pharmaceutical companies, FHIR server vendors, structured/component authoring vendors.
-- **Resources**: `DocumentReference` (for PDFs or referencing `Bundle` type `document`), `Observation` (for PQI data), `Task` (for workflow), `Bundle` (type `transaction` and `document`).
-- **Compliance**: Aligns with ISO IDMP, HL7 Vulcan ePI, and HL7 PQI standards.
-- **Branding**: Branded as **RECON** to emphasize regulatory content exchange and coordinated workflow system (orchestration) that manages the lifecycle of regulatory submissions using Task for clear, trackable processes.
+This **R2CS** (Real-time Regulatory Content Streaming) FHIR Implementation Guide enables subsecond exchange of pharmaceutical regulatory data, transforming workflows for global regulators and pharmaceutical companies. Inspired by high-frequency algorithmic trading and real-time payment systems , R2CS leverages HL7 FHIR, Apache Kafka, and APIs to deliver automated, interoperable, and scalable data exchange for electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), pharmacovigilance, and clinical datasets.
 
-### Pre-requisites
-- **Tools**: Text editor (e.g., VS Code), Git, GitHub for hosting, HAPI FHIR Validator CLI (optional).
-- **FHIR Knowledge**: Familiarity with `Bundle` (type `transaction` and `document`), `Task`, `DocumentReference`, and `Observation` in FHIR R5.
-- **Infrastructure**: Access to a FHIR R5 server (e.g., HAPI FHIR, Kodjin FHIR Server).
-- **Security**: Implement SMART on FHIR and OAuth2 for all API interactions.
+R2CS addresses the need for modern, real-time regulatory processes by:
+- **Streaming Data**: Using Kafka to stream FHIR Transaction Bundles and Dataset-JSON as NDJSON, achieving subsecond validation and processing.
+- **Automation**: Enabling algorithmic workflows for validation, routing, and analytics, akin to trading platforms.
+- **Interoperability**: Supporting global standards (HL7 FHIR, CDISC, ICH) for ePI, PQI, and clinical submissions.
+- **Scalability**: Handling high-volume submissions (e.g., ~100GB/day compressed JSON) with fault-tolerant architecture.
 
-### Background
+## Scope
 
-#### Problem Statement
-The current landscape of regulatory submissions relies on outdated paradigms that blend paper-based and electronic analogs of paper processes. These approaches are often inconsistent, complex, costly, and labor-intensive, posing challenges for regulators, pharmaceutical companies, and other stakeholders. Key issues include:
+R2CS targets pharmaceutical regulatory affairs, enabling:
+- **Electronic Product Information (ePI)**: FHIR-based drug labeling for submission and review.
+- **Pharmaceutical Quality Information (PQI)**: Chemistry, Manufacturing, and Controls (CMC) data exchange.
+- **Clinical Datasets**: CDISC Dataset-JSON for trial data, streamed in real-time.
+- **Global Applicability**: Supports regulators, pharma companies, and healthcare institutions with standardized, automated workflows.
 
-- **Fragmented Structures**: Many submission frameworks depend on intricate file-based systems, such as folder hierarchies with PDFs, tables of contents, and hypertext-linked documents. These structures, while functional, demand significant effort to create, validate, and navigate.
-- **Diverse Exchange Methods**: There is no unified platform for exchanging regulatory content. Instead, submissions are transmitted through a patchwork of technologies, including portals, AS2, AS3, FTP, secure email, regular email, and even physical media or paper. This lack of standardization complicates workflows and increases the risk of errors.
-- **One-Way Workflows**: Most regulatory translation workflows are unidirectional, limiting real-time interaction and feedback. With rare exceptions, such as EMA’s XEVMPD data submissions, there is little support for iterative or dynamic exchanges between submitters and regulators.
-- **Unstructured and Legacy Formats**: Regulatory content is often submitted in formats like DOCX, PDF, various XML schemas, CSV, or SAS datasets. These formats, while widely used, lack the structure and interoperability needed for efficient processing, analysis, or reuse in modern systems.
+This IG provides technical guidance, profiles, and examples for implementing real-time regulatory exchange, with an intitial focus on medicinal products, pharmaceutical quality and drug labeling. Future iterations will expand the scope to include other regulated product types (e.g., medical devices, veterinary, over the counter, and natural health products), and other data domains (e.g., clinical and adverse event reporting).
 
-These challenges hinder the ability to achieve streamlined, cost-effective, and globally harmonized regulatory processes, creating a need for a more modern and accessible approach.
+## Streaming Solution
 
-#### Solution
-The **Regulatory Content Exchange and Orchestration Network (RECON)** IG proposes a forward-looking, web-based standard to transform how regulatory content is exchanged. Built on FHIR R5, RECON leverages interoperable APIs, structured data models, and workflow orchestration to support the seamless exchange of regulatory content, such as ePI and PQI data. Key features include:
+R2CS’s core innovation is its real-time streaming architecture, which processes FHIR Transaction Bundles and Dataset-JSON with subsecond latency. Built on Apache Kafka, the solution:
+- **Publishes Submissions**: Producers (e.g., pharma portals, regulatory gateways) send NDJSON-encoded FHIR Bundles to Kafka topics (e.g., `r2cs-submissions`).
+- **Processes Data**: Parallel consumers validate against JSON Schema, store in databases (e.g., Elasticsearch, MongoDB), and publish status updates.
+- **Enables Querying**: Real-time APIs deliver validated data to stakeholders.
+- **Ensures Compliance**: Provenance resources and Kafka’s exactly-once semantics ensure traceability and data integrity.
 
-- **Structured and Interoperable Content**: RECON uses FHIR resources like `Bundle` (type `document`) for ePI, `Observation` for PQI test results, and `DocumentReference` for PDFs, enabling standardized, machine-readable submissions.
-- **Unified Exchange Platform**: By adopting FHIR-compliant APIs, RECON facilitates consistent, secure, and real-time content exchange, reducing reliance on disparate technologies.
-- **Dynamic Workflows**: The `Task` resource supports orchestrated workflows, allowing regulators and submitters to track, review, and update submissions interactively.
-- **Modern Accessibility**: As a web-based standard, RECON aligns with global initiatives like HL7 Vulcan (ePI), HL7 PQI, and ISO IDMP, ensuring compatibility with emerging regulatory requirements and fostering global harmonization.
+For detailed implementation, including Kafka setup, code examples, and performance metrics, see the [Streaming Solution](streaming.html) page.
 
-RECON offers a modern framework that complements regulator's existing submission processes, enhancing efficiency and interoperability while addressing the complexities of regulatory content exchange.
+## Use Case Examples
 
+R2CS supports key regulatory workflows:
+1. **ePI Submission Exchanges**: A pharma company streams an ePI Document Bundle to a regulator for real-time validation and regulatory review.
+2. **PQI Submission Exchanges**: A pharma company streams quality data to a lab to request a stability study and the lab streams the results back to the company. or the company streams quality data to a regulator for real-time  alidation and regulatory review.
+3. **Clinical Data Processing**: Dataset-JSON clinical datasets are streamed for subsecond analysis and storage.
+4. **Real-time Analytics**: Regulators monitor submission trends using Kafka Streams or Elasticsearch.
+
+## Resources
+
+- [ePI Implementation Guide](https://build.fhir.org/ig/HL7/emedicinal-product-info/)
+- [PQI Implementation Guide](https://build.fhir.org/ig/HL7/uv-dx-pq/)
+- [Apache Kafka Documentation](https://kafka.apache.org/)
+
+## Contact
+
+Contact the R2CS team at [insert contact] or contribute via the [R2CS GitHub repository]([https://github.com/cander2/recon-ig/]).
+
+*This IG is under active development. Feedback is welcome to shape its evolution.*
