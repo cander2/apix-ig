@@ -53,7 +53,7 @@ pages:
   examples.md:
     title: Examples
   techsolution.md:
-    title: Technology Solution
+    title: Streaming Solution
   apiinteractions.md:
     title: API Interactions
   terminology.md:
@@ -96,7 +96,7 @@ menu:
   IG Home: index.html
   Use Cases: usecases.html
   Workflow Overview: workflowoverview.html
-  Technology Solution: techsolution.html
+  Streaming Solution: techsolution.html
   Examples: examples.html
   API Interactions: apiinteractions.html
   Terminology: terminology.html
