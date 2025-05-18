@@ -52,7 +52,7 @@ pages:
     title: Workflow Overview
   examples.md:
     title: Examples
-  techsolutions.md:
+  techsolution.md:
     title: Technology Solution
   apiinteractions.md:
     title: API Interactions
