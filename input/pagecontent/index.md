@@ -9,9 +9,9 @@ last_updated: May 18, 2025
 
 ## Introduction
 
-This IG enables the vision of reducing regulatory transaction and processing timelines from days or hours to sub-second timelines, using digitization, automation, and streaming technologies ([Anderson, Algorri, Abernathy 2023](https://pubmed.ncbi.nlm.nih.gov/37619807/)).
+This IG enables the vision of reducing pharmaceutical regulatory transaction and processing timelines from days or hours to subsecond timelines, using digitization, automation, and streaming technologies.
 
-This **R2CS** (Real-time Regulatory Content Streaming) FHIR Implementation Guide enables subsecond exchange of pharmaceutical regulatory data, transforming workflows for global regulators and pharmaceutical companies. Inspired by high-frequency algorithmic trading and real-time payment systems , R2CS leverages HL7 FHIR, Apache Kafka, and APIs to deliver automated, interoperable, and scalable data exchange for electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), pharmacovigilance, and clinical datasets.
+Inspired by high-frequency algorithmic trading and real-time payment systems ([Anderson, Algorri, Abernathy 2023](https://pubmed.ncbi.nlm.nih.gov/37619807/)), R2CS leverages HL7 FHIR, Apache Kafka, and APIs to deliver automated, interoperable, and scalable data exchange for electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), pharmacovigilance, and clinical datasets.
 
 R2CS addresses the need for modern, real-time regulatory processes by:
 - **Streaming Data**: Using Kafka to stream FHIR Transaction Bundles and Dataset-JSON as NDJSON, achieving subsecond validation and processing.
