@@ -129,9 +129,9 @@ for message in consumer:
 3.  **Storage**: Valid data is indexed in Elasticsearch for querying.
 4.  **Notification**: Submission status (accepted or rejected) is published to recon-notifications.
 5.  **Querying**: Regulators or sponsors query Elasticsearch for the ePI or dataset.
-**Sample NDJSON:**
-{"resourceType":"Bundle","type":"document","id":"ePI-123","entry":[{"resource":{"resourceType":"Composition","title":"ePI for [Medicinal Product]"}}]}
-{"datasetId":"TRIAL-456","type":"SDTM","data":{"rows":[...]}}
+  **Sample NDJSON:**
+  {"resourceType":"Bundle","type":"document","id":"ePI-123","entry":[{"resource":{"resourceType":"Composition","title":"ePI for [Medicinal Product]"}}]}
+  {"datasetId":"TRIAL-456","type":"SDTM","data":{"rows":[...]}}
 
 ### Implementation Guidance
 1.  **Start Small**: Deploy a single-node Kafka cluster for testing with sample FHIR Bundles and Dataset-JSON.
@@ -140,11 +140,13 @@ for message in consumer:
 4.  **Testing**: Use the RECON GitHub repository ([insert link]) to share test Bundles, schemas, and Kafka configurations.
 5.  **Scale Up**: Transition to a multi-node cluster for production, integrating with submission portals and regulatory systems.
 6.  **Interoperability**: Ensure compatibility with global standards (e.g., FHIR R4/R5, CDISC ODM) and regional requirements.
+
 ### Resources
 - **Kafka**: [Apache Kafka Documentation](https://kafka.apache.org/)
 - **Schema Registry**: [Confluent Schema Registry](https://docs.confluent.io/platform/current/schema-registry/index.html)
 - **FHIR**: [HL7 FHIR Bundle](http://hl7.org/fhir/bundle.html)
 - **Tools**: [ijson (Python)](https://pypi.org/project/ijson/), [JSONStream (Node.js)](https://www.npmjs.com/package/JSONStream), [kcat (CLI)](https://github.com/edenhill/kcat)
+
 ### Future Work
 - Integrate with GraphQL APIs for advanced querying of submission data.
 - Support WebSockets for real-time status updates to stakeholders.
