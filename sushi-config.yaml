@@ -52,6 +52,8 @@ pages:
     title: Workflow Overview
   examples.md:
     title: Examples
+  techsolutions.md:
+    title: Technology Solution
   apiinteractions.md:
     title: API Interactions
   terminology.md:
@@ -94,6 +96,7 @@ menu:
   IG Home: index.html
   Use Cases: usecases.html
   Workflow Overview: workflowoverview.html
+  Technology Solution: techsolution.html
   Examples: examples.html
   API Interactions: apiinteractions.html
   Terminology: terminology.html
