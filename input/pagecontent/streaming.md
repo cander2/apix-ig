@@ -78,7 +78,7 @@ The r2cs streaming solution leverages Apache Kafka, a distributed streaming plat
   producer.send('r2cs-submissions', bundle)
   producer.flush()
 ```
-#### Example (Python Consumer):
+- **Example (Python Consumer)**:
   ```python
 from kafka import KafkaConsumer
 from jsonschema import validate
@@ -109,6 +109,7 @@ for message in consumer:
         print(f"Validation error: {e}")
         producer.send('r2cs-validation-errors', {"error": str(e), "bundle": message.value})
 ```
+
 #### Performance
 
 - **Throughput**: A 5-node Kafka cluster processes ~1GB/s, handling 100GB/day (typical compressed JSON volume for large regulatory workflows) in ~100 seconds.
@@ -171,27 +172,3 @@ for message in consumer:
 - Integrate with GraphQL APIs for advanced querying of submission data.
 - Support WebSockets for real-time status updates to stakeholders.
 - Expand to additional workflows (e.g., adverse event reporting, marketing authorization applications), as outlined in R2CS’s roadmap.
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
