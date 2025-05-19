@@ -6,7 +6,7 @@ All examples conform to the [R2CS Profiles](https://build.fhir.org/ig/cander2/re
 
 ### Example 1: ePI Submission Bundle
 
-This `Transaction Bundle` submits an ePI document, identifying the sender (`PharmaCorp Inc.`) and recipient (`European Medicines Agency, EMA`).
+This `Transaction Bundle` submits an ePI document, identifying the sender (`PharmaCorp Inc.`) and recipient (`Regulator`).
 
 ```json
 {
@@ -20,7 +20,7 @@ This `Transaction Bundle` submits an ePI document, identifying the sender (`Phar
         "status": "requested",
         "intent": "order",
         "requester": {"reference": "Organization/pharma-co-123", "display": "PharmaCorp Inc."},
-        "owner": {"reference": "Organization/regulator-456", "display": "EMA"},
+        "owner": {"reference": "Organization/regulator-456", "display": "Regulator"},
         "focus": {"reference": "DocumentReference/ePI-123"}
       },
       "request": {"method": "POST", "url": "Task"}
@@ -57,7 +57,7 @@ This `Transaction Bundle` submits an ePI document, identifying the sender (`Phar
                 {"system": "http://terminology.hl7.org/CodeSystem/provenance-participant-type", "code": "performer"}
               ]
             },
-            "who": {"reference": "Organization/regulator-456", "display": "EMA"}
+            "who": {"reference": "Organization/regulator-456", "display": "Regulator"}
           }
         ]
       },
@@ -79,7 +79,7 @@ This `Transaction Bundle` submits an ePI document, identifying the sender (`Phar
         "resourceType": "Organization",
         "id": "regulator-456",
         "identifier": [
-          {"system": "urn:oid:1.3.6.1.4.1.343", "value": "ema-456"}
+          {"system": "urn:oid:1.3.6.1.4.1.343", "value": "Regulator-456"}
         ],
         "name": "European Medicines Agency"
       },
