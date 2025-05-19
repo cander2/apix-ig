@@ -1,5 +1,3 @@
-# Examples
-
 ## Overview
 
 This section provides example FHIR resources and bundles to illustrate the RECON workflow for submitting, updating, and monitoring regulatory content, such as electronic Product Information (ePI) and Product Quality Information (PQI). These examples demonstrate the use of `Task`, `DocumentReference`, `Provenance`, `OperationOutcome`, and `Subscription` resources, with clear identification of the sender (submitter) and recipient (regulator).
