@@ -1,16 +1,16 @@
 ### Overview
 
-The Regulatory Content Exchange and Orchestration Network (RECON) enables seamless exchange of regulatory submissions between stakeholders, including regulatory authorities (e.g., global health agencies) and pharmaceutical companies. To manage the high volume of submission data—such as electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), and clinical datasets—RECON employs a streaming solution using Apache Kafka and JSON streaming. This page outlines the streaming architecture, its integration with FHIR Transaction Bundles, and implementation guidance for processing large-scale regulatory data in JSON format, including CDISC Dataset-JSON for clinical submissions.
+The Regulatory Content Exchange and Orchestration Network (r2cs) enables seamless exchange of regulatory submissions between stakeholders, including regulatory authorities (e.g., global health agencies) and pharmaceutical companies. To manage the high volume of submission data—such as electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), and clinical datasets—r2cs employs a streaming solution using Apache Kafka and JSON streaming. This page outlines the streaming architecture, its integration with FHIR Transaction Bundles, and implementation guidance for processing large-scale regulatory data in JSON format, including CDISC Dataset-JSON for clinical submissions.
 
 This solution supports the high-throughput needs of regulatory workflows, handling thousands of daily submissions (e.g., ~100GB compressed JSON) and enabling real-time validation, storage, and querying. It aligns with global trends toward modern data formats and streaming architectures in regulatory exchange.
 
 ### Streaming Architecture
 
-The RECON streaming solution leverages Apache Kafka, a distributed streaming platform, to process FHIR Transaction Bundles and Dataset-JSON payloads in real-time. Kafka’s high-throughput, fault-tolerant design ensures scalability and reliability for diverse regulatory and pharma workflows.
+The r2cs streaming solution leverages Apache Kafka, a distributed streaming platform, to process FHIR Transaction Bundles and Dataset-JSON payloads in real-time. Kafka’s high-throughput, fault-tolerant design ensures scalability and reliability for diverse regulatory and pharma workflows.
 
 #### Key Components
 
-- **Kafka Topics**: Logical channels for data streams (e.g., `recon-submissions` for FHIR Bundles, `recon-notifications` for status updates).
+- **Kafka Topics**: Logical channels for data streams (e.g., `r2cs-submissions` for FHIR Bundles, `r2cs-notifications` for status updates).
 - **Producers**: Systems (e.g., submission portals, regulatory gateways) that publish JSON-encoded FHIR Bundles or Dataset-JSON to topics.
 - **Consumers**: Services that subscribe to topics for validation, storage, or analytics (e.g., JSON Schema validation, database indexing).
 - **Brokers**: Kafka servers in a cluster (3-5 nodes recommended) that store and replicate data.
@@ -18,17 +18,17 @@ The RECON streaming solution leverages Apache Kafka, a distributed streaming pla
 
 #### Workflow
 
-1. **Submission Ingestion**: A producer (e.g., pharma submission system, regulatory gateway) converts submissions (e.g., ePI as FHIR Bundle, clinical data as Dataset-JSON) to JSON and publishes to the `recon-submissions` topic.
+1. **Submission Ingestion**: A producer (e.g., pharma submission system, regulatory gateway) converts submissions (e.g., ePI as FHIR Bundle, clinical data as Dataset-JSON) to JSON and publishes to the `r2cs-submissions` topic.
 2. **Streaming Processing**:
-   - Consumer 1 validates JSON against schemas (e.g., RECON Bundle profile, CDISC Dataset-JSON).
+   - Consumer 1 validates JSON against schemas (e.g., R2CS Bundle profile, CDISC Dataset-JSON).
    - Consumer 2 stores valid data in a database (e.g., MongoDB, Elasticsearch).
-   - Consumer 3 publishes status updates to `recon-notifications`.
+   - Consumer 3 publishes status updates to `r2cs-notifications`.
 3. **Real-Time Querying**: APIs (e.g., Elasticsearch-based) serve validated data to stakeholders.
 4. **Monitoring**: Prometheus tracks throughput and latency; logs capture JSON payloads for debugging.
 
 #### FHIR Integration
 
-- **Transaction Bundles**: RECON uses Bundle (type: document) in JSON format to encapsulate ePI, PQI, or clinical data. These are streamed as NDJSON (Newline-Delimited JSON) for Kafka compatibility.
+- **Transaction Bundles**: R2CS uses Bundle (type: document) in JSON format to encapsulate ePI, PQI, or clinical data. These are streamed as NDJSON (Newline-Delimited JSON) for Kafka compatibility.
 - **Task Resource**: Captures submission metadata (e.g., sender, recipient) and links to validation outcomes, included in the Bundle.
 - **Provenance Resource**: Tracks data origin and processing history, ensuring traceability for regulatory compliance.
 
@@ -38,11 +38,11 @@ The RECON streaming solution leverages Apache Kafka, a distributed streaming pla
 
 - **Cluster**: Deploy a 3-5 node Kafka cluster (e.g., Confluent Cloud, AWS MSK, or on-premises) for fault tolerance.
 - **Topics**:
-  - `recon-submissions`: FHIR Bundles and Dataset-JSON.
-  - `recon-validation-errors`: Failed validations.
-  - `recon-notifications`: Submission status.
+  - `r2cs-submissions`: FHIR Bundles and Dataset-JSON.
+  - `r2cs-validation-errors`: Failed validations.
+  - `r2cs-notifications`: Submission status.
 - **Retention**: Configure retention (e.g., 7-30 days) based on regulatory auditing requirements.
-- **Schema Registry**: Use Confluent Schema Registry with JSON Schema for RECON profiles and Dataset-JSON.
+- **Schema Registry**: Use Confluent Schema Registry with JSON Schema for R2CS profiles and Dataset-JSON.
 
 #### Streaming JSON
 
@@ -75,15 +75,16 @@ The RECON streaming solution leverages Apache Kafka, a distributed streaming pla
           }
       ]
   }
-  producer.send('recon-submissions', bundle)
+  producer.send('r2cs-submissions', bundle)
   producer.flush()
-
+```
 #### Example (Python Consumer):
+  ```python
 from kafka import KafkaConsumer
 from jsonschema import validate
 import json
 
-## RECON Bundle schema (simplified)
+# R2CS Bundle schema (simplified)
 schema = {
     "type": "object",
     "properties": {
@@ -94,7 +95,7 @@ schema = {
 }
 
 consumer = KafkaConsumer(
-    'recon-submissions',
+    'r2cs-submissions',
     bootstrap_servers=['kafka:9092'],
     value_deserializer=lambda v: json.loads(v.decode('utf-8'))
 )
@@ -106,8 +107,8 @@ for message in consumer:
         # Store in database
     except Exception as e:
         print(f"Validation error: {e}")
-        producer.send('recon-validation-errors', {"error": str(e), "bundle": message.value})
-
+        producer.send('r2cs-validation-errors', {"error": str(e), "bundle": message.value})
+```
 #### Performance
 
 - **Throughput**: A 5-node Kafka cluster processes ~1GB/s, handling 100GB/day (typical compressed JSON volume for large regulatory workflows) in ~100 seconds.
@@ -137,22 +138,24 @@ for message in consumer:
 
 #### Example Use Case
 
-**Scenario**: A pharmaceutical company submits an ePI Bundle and a Dataset-JSON clinical dataset to a regulatory authority via RECON.
-1.  **Submission**: The company’s portal publishes both to recon-submissions as NDJSON.
-2.  **Validation**: A consumer validates against RECON Bundle profile and CDISC schema.
+**Scenario**: A pharmaceutical company submits an ePI Bundle and a Dataset-JSON clinical dataset to a regulatory authority via R2CS.
+1.  **Submission**: The company’s portal publishes both to r2cs-submissions as NDJSON.
+2.  **Validation**: A consumer validates against R2CS Bundle profile and CDISC schema.
 3.  **Storage**: Valid data is indexed in Elasticsearch for querying.
-4.  **Notification**: Submission status (accepted or rejected) is published to recon-notifications.
+4.  **Notification**: Submission status (accepted or rejected) is published to r2cs-notifications.
 5.  **Querying**: Regulators or sponsors query Elasticsearch for the ePI or dataset.
   **Sample NDJSON:**
+    ```ndjson
   {"resourceType":"Bundle","type":"document","id":"ePI-123","entry":[{"resource":{"resourceType":"Composition","title":"ePI for [Medicinal Product]"}}]}
   {"datasetId":"TRIAL-456","type":"SDTM","data":{"rows":[...]}}
+```
 
 #### Implementation Guidance
 
 1.  **Start Small**: Deploy a single-node Kafka cluster for testing with sample FHIR Bundles and Dataset-JSON.
-2.  **Schema Development**: Define JSON Schema for RECON Bundle profiles and Dataset-JSON, hosted in the Schema Registry.
+2.  **Schema Development**: Define JSON Schema for R2CS Bundle profiles and Dataset-JSON, hosted in the Schema Registry.
 3.  **Consumer Logic**: Implement parallel consumers for validation, storage, and notifications, tailored to regulatory requirements.
-4.  **Testing**: Use the RECON GitHub repository ([insert link]) to share test Bundles, schemas, and Kafka configurations.
+4.  **Testing**: Use the r2cs GitHub repository ([insert link]) to share test Bundles, schemas, and Kafka configurations.
 5.  **Scale Up**: Transition to a multi-node cluster for production, integrating with submission portals and regulatory systems.
 6.  **Interoperability**: Ensure compatibility with global standards (e.g., FHIR R4/R5, CDISC ODM) and regional requirements.
 
@@ -167,7 +170,7 @@ for message in consumer:
 
 - Integrate with GraphQL APIs for advanced querying of submission data.
 - Support WebSockets for real-time status updates to stakeholders.
-- Expand to additional workflows (e.g., adverse event reporting, marketing authorization applications), as outlined in RECON’s roadmap.
+- Expand to additional workflows (e.g., adverse event reporting, marketing authorization applications), as outlined in R2CS’s roadmap.
 
 
 
