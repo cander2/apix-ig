@@ -2,7 +2,7 @@
 
 This section provides example FHIR resources and bundles to illustrate the RECON workflow for submitting, updating, and monitoring regulatory content, such as electronic Product Information (ePI) and Product Quality Information (PQI). These examples demonstrate the use of `Task`, `DocumentReference`, `Provenance`, `OperationOutcome`, and `Subscription` resources, with clear identification of the sender (submitter) and recipient (regulator).
 
-All examples conform to the [RECON FHIR Profiles](https://build.fhir.org/ig/cander2/recon-ig/profiles.html). Downloadable JSON files are available in the [GitHub repository](https://github.com/cander2/recon-ig/tree/main/input/examples).
+All examples conform to the [R2CS Profiles](https://build.fhir.org/ig/cander2/recon-ig/profiles.html). Downloadable JSON files are available on the [Downloads](https://build.fhir.org/ig/cander2/recon-ig/downloads.html) page.
 
 ### Example 1: ePI Submission Bundle
 
