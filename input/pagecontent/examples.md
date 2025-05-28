@@ -1,5 +1,3 @@
-# Examples
-
 This page provides example FHIR Bundles to demonstrate regulatory workflows for two drug applications: a safety update and a shelf life update for the same drug (NDC: 12345-678-90). The examples align with the R2CS streaming architecture, using Apache Kafka to process JSON Bundles in real-time, and include:
 
 - **Transaction Bundles** (`type: transaction`): Original submissions and approvals, containing Task, DocumentReference (inlining ePI, eAF, PQI Bundles in `content.attachment.data`), MedicinalProductDefinition, and Provenance.

@@ -5,8 +5,6 @@ version: 0.2.0
 last_updated: May 18, 2025
 ---
 
-# R2CS FHIR Implementation Guide: Real-time Regulatory Content Streaming
-
 ### Introduction
 
 This IG enables the vision of reducing pharmaceutical regulatory transaction and processing timelines from days or hours to subsecond timelines, using digitization, automation, and streaming technologies.
