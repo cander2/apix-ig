@@ -3,7 +3,7 @@
 This page provides example FHIR Bundles to demonstrate regulatory workflows for two drug applications: a safety update and a shelf life update for the same drug (NDC: 12345-678-90). The examples align with the R2CS streaming architecture, using Apache Kafka to process JSON Bundles in real-time, and include:
 
 - **Transaction Bundles** (`type: transaction`): Original submissions and approvals, containing Task, DocumentReference (inlining ePI, eAF, PQI Bundles in `content.attachment.data`), MedicinalProductDefinition, and Provenance.
-- **Document Bundles** (`type: document`): ePI, eAF, FDA Requests for Information (RFIs), and company responses, containing Composition or DocumentReference, Task, and Provenance.
+- **Document Bundles** (`type: document`): ePI, eAF, Requests for Information (RFIs), and company responses, containing Composition or DocumentReference, Task, and Provenance.
 - **Collection Bundles** (`type: collection`): PQI content, inlined in submission Transaction Bundles.
 
 All Bundles are uniquely identified (`Bundle.identifier`), linked to parent applications (`Task.basedOn`), and tracked by NDC codes (`MedicinalProductDefinition`). They are streamed as NDJSON to `r2cs-submissions` or `r2cs-notifications`, with sanitization (schema validation, tag whitelisting, SHA-256 hashes) to ensure security and compliance (e.g., 21 CFR Part 11, EU GMP Annex 11).
@@ -193,8 +193,8 @@ The pharmaceutical company submits the safety update on May 1, 2025, inlining eP
 }
 ```
 
-### FDA Request for Information - Safety Update 
-FDA requests additional data on May 3, 2025.
+### Regulator Request for Information - Safety Update 
+Regulator requests additional data on May 3, 2025.
 
 ```json
 {
@@ -456,8 +456,8 @@ The company responds with clinical data on May 5, 2025.
 }
 ```
 
-### FDA Approval - Safety Update
-FDA approves the safety update on May 7, 2025.
+### Regulator Approval - Safety Update
+Regulator approves the safety update on May 7, 2025.
 
 ```json
 {
@@ -763,8 +763,8 @@ The company submits the shelf life update on May 8, 2025, inlining ePI, eAF, and
 }
 ```
 
-### FDA Request for Information - Shelf Life Update
-FDA requests additional stability data on May 10, 2025.
+### Regulator Request for Information - Shelf Life Update
+Regulator requests additional stability data on May 10, 2025.
 
 ```json
 {
@@ -1026,8 +1026,8 @@ The company responds with stability data on May 12, 2025.
 }
 ```
 
-### FDA Approval - Shelf Life Update (Transaction Bundle)
-FDA approves the shelf life update on May 14, 2025.
+### Regulator Approval - Shelf Life Update (Transaction Bundle)
+Regulator approves the shelf life update on May 14, 2025.
 
 ```json
 {
