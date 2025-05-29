@@ -53,6 +53,6 @@ R2CS supports key regulatory workflows:
 
 ### Contact
 
-Contact the R2CS team at [insert contact] or contribute via the [R2CS GitHub repository]([https://github.com/cander2/recon-ig/]).
+Contact the R2CS project team or contribute via the [R2CS GitHub repository](https://github.com/cander2/recon-ig).
 
 *This IG is under active development. Feedback is welcome to shape its evolution.*
