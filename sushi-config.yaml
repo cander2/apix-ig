@@ -6,7 +6,7 @@
 id: hl7.fhir.uv.recon-ig
 canonical: http://hl7.org/fhir/uv/recon-ig
 name: ReconIG
-title: Real-time Regulatory Content Streaming (R2CS)
+title: Real-time Regulatory Content Exchange
 description: Enables real-time, subsecond exchange of pharmaceutical regulatory data (e.g., drug labeling and drug quality) using FHIR and KAFKA streaming.
 status: draft # draft | active | retired | unknown
 version: 0.1.0
@@ -96,7 +96,7 @@ menu:
   IG Home: index.html
   Use Cases: usecases.html
   Workflow Overview: workflowoverview.html
-  Streaming Solution: streaming.html
+  Exchange Solution: streaming.html
   Examples: examples.html
   API Interactions: apiinteractions.html
   Terminology: terminology.html
