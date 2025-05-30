@@ -26,7 +26,7 @@ This IG provides technical guidance, profiles, and examples for implementing rea
 R2CS’s goal is to enable real-time streaming architecture, which processes FHIR Transaction Bundles with subsecond latency. 
 
 **Figure 1: Anatomy of a Regulatory Application or Transaction on FHIR**
-<img src="transactionanatomy.png" alt="Components of the Regulatory Transaction Bundle" style="float: none;"/>
+<img src="transactionanatomy.png" alt="Components of the Regulatory Transaction Bundle" style="float: none;" style="width:500px;height:600px;"/>
 
 This IG describes several technical solution options capable of supporting low, medium, or high transaction volumes. However, these are merely suggestions for discussion. Implementers are encouraged to select any FHIR compliant technical solution that suits their unique requirements and means. 
 
