@@ -2,7 +2,7 @@
 
 This IG enables the vision of reducing pharmaceutical regulatory transaction and processing timelines from days or hours to subsecond timelines, using digitization, automation, and streaming technologies.
 
-Inspired by the Uppsala Monitoring Centre's (UMC) [IDMP Request and Publish API IG](https://build.fhir.org/ig/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service/index.html) and the finance industry's real-time algorithmic systems ([Anderson, Algorri, Abernathy 2023](https://pubmed.ncbi.nlm.nih.gov/37619807/)), R2CS leverages HL7 FHIR, Apache Kafka, and APIs to deliver automated, interoperable, and scalable data exchange for electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), pharmacovigilance, and clinical datasets.
+Inspired by the Uppsala Monitoring Centre's (UMC) [IDMP Request and Publish API IG](https://build.fhir.org/ig/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service/index.html) and the finance industry's real-time algorithmic systems ([Anderson, Algorri, Abernathy 2023](https://pubmed.ncbi.nlm.nih.gov/37619807/)), R2CS leverages HL7 FHIR and modern API based technologies to deliver automated, interoperable, and scalable data exchange for electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), pharmacovigilance, requests for information, and clinical trials.
 
 R2CS addresses the need for modern, real-time regulatory processes by:
 - **Streaming Data**: Using Kafka to stream FHIR Transaction Bundles and Dataset-JSON as NDJSON, achieving subsecond validation and processing.
@@ -13,29 +13,37 @@ R2CS addresses the need for modern, real-time regulatory processes by:
 ### Scope
 
 R2CS targets pharmaceutical regulatory affairs, enabling:
-- **Electronic Product Information (ePI)**: FHIR-based drug labeling for submission and review.
-- **Pharmaceutical Quality Information (PQI)**: Chemistry, Manufacturing, and Controls (CMC) data exchange.
-- **Clinical Datasets**: CDISC Dataset-JSON for trial data, streamed in real-time.
+- **Electronic Product Information (ePI)**: Drug labeling transactions.
+- **Pharmaceutical Quality Information (PQI)**: Pharmaceutical quality transactions transactions.
+- **Request for Information (RFI)**: Health authority questions to manufacturers, and manufacturers response back to the health authority.
+- **Clinical trial**: Clinical trial transactions.
 - **Global Applicability**: Supports regulators, pharma companies, and healthcare institutions with standardized, automated workflows.
 
 This IG provides technical guidance, profiles, and examples for implementing real-time regulatory exchange, with an intitial focus on medicinal products, pharmaceutical quality and drug labeling. Future iterations will expand the scope to include other regulated product types (e.g., medical devices, veterinary, over the counter, and natural health products), and other data domains (e.g., clinical and adverse event reporting).
 
 ### Streaming Solution
 
-R2CS’s core innovation is its real-time streaming architecture, which processes FHIR Transaction Bundles and Dataset-JSON with subsecond latency. Built on Apache Kafka, the solution:
-- **Publishes Submissions**: Producers (e.g., pharma portals, regulatory gateways) send NDJSON-encoded FHIR Bundles to Kafka topics (e.g., `r2cs-submissions`).
-- **Processes Data**: Parallel consumers validate against JSON Schema, store in databases (e.g., Elasticsearch, MongoDB), and publish status updates.
-- **Enables Querying**: Real-time APIs deliver validated data to stakeholders.
-- **Ensures Compliance**: Provenance resources and Kafka’s exactly-once semantics ensure traceability and data integrity.
+R2CS’s goal is to enable real-time streaming architecture, which processes FHIR Transaction Bundles with subsecond latency. 
 
-For detailed implementation, including Kafka setup, code examples, and performance metrics, see the [Streaming Solution](streaming.html) page.
+**Figure 1: Anatomy of a Regulatory Application or Transaction on FHIR**
+<img src="transactionanatomy.png" alt="Components of the Regulatory Transaction Bundle" style="float: none;"/>
+
+This IG describes several technical solution options capable of supporting low, medium, or high transaction volumes. However, these are merely suggestions for discussion. Implementers are encouraged to select any FHIR compliant technical solution that suits their unique requirements and means. 
+
+This IG describes various technology options that implementers can use to support low, medium and high transaction volumes:
+- **Create Transactions**: Producers (e.g., pharma portals, regulatory gateways) send encoded FHIR Bundles to Consumers (e.g., health authority, CRO, CMO).
+- **Processes Data**: Consumers validate against JSON Schema, store in databases (e.g., Elasticsearch, MongoDB), and publish status updates.
+- **Enables Querying**: Real-time APIs deliver validated data to stakeholders.
+- **Ensures Compliance**: Provenance resources ensure traceability and data integrity.
+
+For detailed implementation, including Kafka setup, code examples, and performance metrics, see the [Solution Options](streaming.html) page.
 
 ### Use Case Examples
 
 R2CS supports key regulatory workflows:
 1. **ePI Submission Exchanges**: A pharma company streams an ePI Document Bundle to a regulator for real-time validation and regulatory review.
-2. **PQI Submission Exchanges**: A pharma company streams quality data to a lab to request a stability study and the lab streams the results back to the company. or the company streams quality data to a regulator for real-time  alidation and regulatory review.
-3. **Clinical Data Processing**: Dataset-JSON clinical datasets are streamed for subsecond analysis and storage.
+2. **PQI Submission Exchanges**: A pharma company streams quality data to a lab to request a stability study and the lab streams the results back to the company. Or the company streams quality data to a regulator for real-time  validation and regulatory review.
+3. **Clinical Data Processing**: Clinical datasets are streamed for real-time processing.
 4. **Real-time Analytics**: Regulators monitor submission trends using Kafka Streams or Elasticsearch.
 
 ### Resources
