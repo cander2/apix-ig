@@ -46,11 +46,18 @@ R2CS supports key regulatory workflows:
 3. **Clinical Data Processing**: Clinical datasets are streamed for real-time processing.
 4. **Real-time Analytics**: Regulators monitor submission trends using Kafka Streams or Elasticsearch.
 
-### Resources
+### Background References
 
 - [ePI Implementation Guide](https://build.fhir.org/ig/HL7/emedicinal-product-info/)
-- [PQI Implementation Guide](https://build.fhir.org/ig/HL7/uv-dx-pq/)
-- [Apache Kafka Documentation](https://kafka.apache.org/)
+- [HL7 Vulcan ePI IG](http://build.fhir.org/ig/HL7/emedicinal-product-info/)
+- [HL7 Pharmaceutical Quality Information (PQI) IG](https://build.fhir.org/ig/HL7/uv-dx-pq/)
+- [FHIR Workflow Module](https://build.fhir.org/workflow-module.html)
+- [ISO IDMP](https://www.iso.org/news/ref2234.html)
+- [UMC IDMP API FHIR service](https://build.fhir.org/ig/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service/index.html)
+- [Structured content and data management—enhancing acceleration in drug development through efficiency in data exchange](https://pmc.ncbi.nlm.nih.gov/articles/PMC10164450/)
+- [Real-time algorithmic exchange and processing of pharmaceutical quality data and information](https://www.sciencedirect.com/science/article/pii/S0378517323007627)
+- [The Future of CMC Regulatory Submissions: Streamlining Activities Using Structured Content and Data Management](https://www.sciencedirect.com/science/article/pii/S0022354921005323)
+
 
 ### Contact
 
