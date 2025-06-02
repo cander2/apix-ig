@@ -38,8 +38,6 @@ pages:
     title: Validation
   downloads.md:
     title: Downloads
-  references.md:
-    title: References
 
 menu:
   IG Home: index.html
@@ -55,7 +53,6 @@ menu:
   Validation: validation.html
   Artifacts: artifacts.html
   Downloads: downloads.html
-  References: references.html
 
 instanceOptions:
   # When set to true, slices must be referred to by name and not only by a numeric index in order to be used
