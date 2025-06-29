@@ -1,0 +1,251 @@
+{
+  "resourceType": "Bundle",
+  "id": "2",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:task-002",
+      "resource": {
+        "resourceType": "Task",
+        "id": "task-002",
+        "status": "requested",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/task-code",
+              "code": "respond-to-questions",
+              "display": "Respond to List of Questions"
+            }
+          ]
+        },
+        "description": "Provide responses to the List of Questions for Type II variation (shelf life extension)",
+        "for": {
+          "reference": "MedicinalProductDefinition/mpd-001"
+        },
+        "authoredOn": "2025-06-29T17:56:00-04:00",
+        "requester": {
+          "reference": "Organization/ema"
+        },
+        "owner": {
+          "reference": "Organization/pharma-inc"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Task"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:loq-bundle-001",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "loq-bundle-001",
+        "type": "collection",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:questionnaire-001",
+            "resource": {
+              "resourceType": "Questionnaire",
+              "id": "questionnaire-001",
+              "status": "active",
+              "title": "List of Questions for Type II Variation (Shelf Life Extension)",
+              "item": [
+                {
+                  "linkId": "admin-1",
+                  "text": "Is the fee for the Type II variation fully paid and documented?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "administrative"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "admin-2",
+                  "text": "Are all required metadata fields in the application form complete?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "administrative"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "labeling-1",
+                  "text": "Do the updated storage conditions (2-8°C for 36 months) require additional patient guidance?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "labeling-storage"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "labeling-2",
+                  "text": "Is the patient leaflet revised to clarify the extended shelf life?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "labeling-patient-info"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "labeling-3",
+                  "text": "Is the updated ePI text sufficiently clear for all EU languages?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "labeling-clarity"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-1",
+                  "text": "Do stability studies cover all required environmental conditions for 36 months?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "cmc-stability"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-2",
+                  "text": "Are analytical methods validated for detecting degradation over 36 months?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "cmc-analytical"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-3",
+                  "text": "Are new impurities identified in extended stability studies?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "cmc-impurities"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-4",
+                  "text": "Is the container closure system validated for 36 months?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "cmc-container"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-5",
+                  "text": "Are degradation products fully characterized for 36 months?",
+                  "type": "string",
+                  "extension": [
+                    {
+                      "url": "http://example.org/fhir/StructureDefinition/question-category",
+                      "valueCoding": {
+                        "system": "http://example.org/codes",
+                        "code": "cmc-degradation"
+                      }
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Bundle"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:provenance-002",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "provenance-002",
+        "target": [
+          {
+            "reference": "Bundle/loq-bundle-001"
+          }
+        ],
+        "recorded": "2025-06-29T17:56:00-04:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/provenance-participant-type",
+                  "code": "author"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Organization/ema"
+            }
+          }
+        ],
+        "signature": [
+          {
+            "type": [
+              {
+                "system": "urn:iso-astm:E1762-95:2013",
+                "code": "1.2.840.10065.1.12.1.1"
+              }
+            ],
+            "when": "2025-06-29T17:56:00-04:00",
+            "who": {
+              "reference": "Organization/ema"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Provenance"
+      }
+    }
+  ]
+}

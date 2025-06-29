@@ -1,0 +1,232 @@
+{
+  "resourceType": "Bundle",
+  "id": "4",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:task-001",
+      "resource": {
+        "resourceType": "Task",
+        "id": "task-001",
+        "status": "requested",
+        "intent": "proposal",
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/task-code",
+              "code": "submit-variation",
+              "display": "Submit Type II Variation"
+            }
+          ]
+        },
+        "description": "Type II variation for shelf life extension from 24 to 36 months",
+        "for": {
+          "reference": "MedicinalProductDefinition/mpd-001"
+        },
+        "authoredOn": "2025-06-29",
+        "requester": {
+          "reference": "Organization/pharma-inc"
+        },
+        "owner": {
+          "reference": "Organization/ema"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Task"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:doc-ref-001",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "doc-ref-001",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51851-4",
+              "display": "Administrative report"
+            }
+          ]
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/json",
+              "data": "base64 data placeholder",
+              "hash": "qZk+NkcGgWq6PiVxeFDCbJzQ2J0=/nE+3Y2c=",
+              "size": 1234,
+              "title": "Type II Variation Application Form Collection Bundle"
+            }
+          },
+          {
+            "attachment": {
+              "contentType": "application/json",
+              "data": "base64 data placeholder",
+              "hash": "qZk+NkcGgWq6PiVxeFDCbJzQ2J0=/nE+3Y2c=",
+              "size": 1234,
+              "title": "ePI Storage Update Document Bundle"
+            }
+          },
+          {
+            "attachment": {
+              "contentType": "application/json",
+              "data": "base64 data placeholder",
+              "hash": "qZk+NkcGgWq6PiVxeFDCbJzQ2J0=/nE+3Y2c=",
+              "size": 1234,
+              "title": "PQI Stability Data Collection Bundle"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DocumentReference"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:provenance-001",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "provenance-001",
+        "target": [
+          {
+            "reference": "DocumentReference/doc-ref-001"
+          }
+        ],
+        "recorded": "2025-06-29T17:25:00-04:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/provenance-participant-type",
+                  "code": "author"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Organization/pharma-inc"
+            }
+          }
+        ],
+        "signature": [
+          {
+            "type": [
+              {
+                "system": "urn:iso-astm:E1762-95:2013",
+                "code": "1.2.840.10065.1.12.1.1"
+              }
+            ],
+            "when": "2025-06-29T17:25:00-04:00",
+            "who": {
+              "reference": "Organization/pharma-inc"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Provenance"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:application-form-001",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "application-form-001",
+        "type": "collection",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:activity-definition-001",
+            "resource": {
+              "resourceType": "ActivityDefinition",
+              "id": "activity-definition-001",
+              "status": "draft",
+              "description": "Type II variation application for shelf life extension from 24 to 36 months"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Bundle"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:epi-bundle-001",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "epi-bundle-001",
+        "type": "document",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:epi-composition-001",
+            "resource": {
+              "resourceType": "Composition",
+              "id": "epi-composition-001",
+              "status": "preliminary",
+              "type": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "34391-3",
+                    "display": "Product Labeling"
+                  }
+                ]
+              },
+              "title": "Updated ePI for Monoclonal Antibody",
+              "section": [
+                {
+                  "title": "Storage",
+                  "text": {
+                    "status": "generated",
+                    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\">Store at 2-8°C for up to 36 months.</div>"
+                  }
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Bundle"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:pqi-bundle-001",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "pqi-bundle-001",
+        "type": "collection",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:observation-001",
+            "resource": {
+              "resourceType": "Observation",
+              "id": "observation-001",
+              "status": "final",
+              "code": {
+                "coding": [
+                  {
+                    "system": "http://loinc.org",
+                    "code": "76662-2",
+                    "display": "Stability study"
+                  }
+                ]
+              },
+              "valueString": "Stability data supports shelf life extension to 36 months"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Bundle"
+      }
+    }
+  ]
+}

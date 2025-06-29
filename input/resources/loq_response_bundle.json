@@ -1,0 +1,209 @@
+{
+  "resourceType": "Bundle",
+  "id": "3",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:task-003",
+      "resource": {
+        "resourceType": "Task",
+        "id": "task-003",
+        "status": "completed",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/task-code",
+              "code": "submit-response",
+              "display": "Submit Response to List of Questions"
+            }
+          ]
+        },
+        "description": "Submission of responses to the List of Questions for Type II variation (shelf life extension)",
+        "for": {
+          "reference": "MedicinalProductDefinition/mpd-001"
+        },
+        "authoredOn": "2025-06-29T18:15:00-04:00",
+        "requester": {
+          "reference": "Organization/pharma-inc"
+        },
+        "owner": {
+          "reference": "Organization/ema"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Task"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:response-bundle-001",
+      "resource": {
+        "resourceType": "Bundle",
+        "id": "response-bundle-001",
+        "type": "collection",
+        "entry": [
+          {
+            "fullUrl": "urn:uuid:questionnaire-response-001",
+            "resource": {
+              "resourceType": "QuestionnaireResponse",
+              "id": "questionnaire-response-001",
+              "questionnaire": "Questionnaire/questionnaire-001",
+              "status": "completed",
+              "authored": "2025-06-29T18:15:00-04:00",
+              "item": [
+                {
+                  "linkId": "admin-1",
+                  "text": "Is the fee for the Type II variation fully paid and documented?",
+                  "answer": [
+                    {
+                      "valueString": "Yes, the fee was paid on June 25, 2025, with documentation included in the application form."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "admin-2",
+                  "text": "Are all required metadata fields in the application form complete?",
+                  "answer": [
+                    {
+                      "valueString": "All metadata fields are complete, as verified against EMA guidelines."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "labeling-1",
+                  "text": "Do the updated storage conditions (2-8°C for 36 months) require additional patient guidance?",
+                  "answer": [
+                    {
+                      "valueString": "No additional guidance is needed; the ePI clearly states storage at 2-8°C for 36 months."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "labeling-2",
+                  "text": "Is the patient leaflet revised to clarify the extended shelf life?",
+                  "answer": [
+                    {
+                      "valueString": "Yes, the patient leaflet has been updated to reflect the 36-month shelf life."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "labeling-3",
+                  "text": "Is the updated ePI text sufficiently clear for all EU languages?",
+                  "answer": [
+                    {
+                      "valueString": "The ePI text has been translated and reviewed for clarity in all EU languages."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-1",
+                  "text": "Do stability studies cover all required environmental conditions for 36 months?",
+                  "answer": [
+                    {
+                      "valueString": "Yes, stability studies include temperature, humidity, and light conditions for 36 months, per ICH guidelines."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-2",
+                  "text": "Are analytical methods validated for detecting degradation over 36 months?",
+                  "answer": [
+                    {
+                      "valueString": "Analytical methods are fully validated, with results included in the PQI submission."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-3",
+                  "text": "Are new impurities identified in extended stability studies?",
+                  "answer": [
+                    {
+                      "valueString": "No new impurities were identified; all impurities are within acceptable limits."
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-4",
+                  "text": "Is the container closure system validated for 36 months?",
+                  "answer": [
+                    {
+                      "valueString": "The container closure system is validated for 36 months, with supporting data in the PQI Bundle."
+                    },
+                    {
+                      "valueAttachment": {
+                        "contentType": "image/svg+xml",
+                        "data": "PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIj48cmVjdCB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgZmlsbD0iI2ZmZiIvPjx0ZXh0IHg9IjUwIiB5PSI1MCIgZm9udC1zaXplPSIxNSIgZmlsbD0iIzAwMCIgdGV4dC1hbmNob3I9Im1pZGRsZSI+U1ZHIFBsYWNlaG9sZGVyPC90ZXh0Pjwvc3ZnPg==",
+                        "title": "Container Closure System Diagram"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "linkId": "cmc-5",
+                  "text": "Are degradation products fully characterized for 36 months?",
+                  "answer": [
+                    {
+                      "valueString": "Degradation products are fully characterized. No significant changes were observed in the 36-month stability studies.\nAll identified degradation products remain within acceptable limits, as detailed in the PQI submission."
+                    }
+                  ]
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Bundle"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:provenance-003",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "provenance-003",
+        "target": [
+          {
+            "reference": "Bundle/response-bundle-001"
+          }
+        ],
+        "recorded": "2025-06-29T18:15:00-04:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/provenance-participant-type",
+                  "code": "author"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Organization/pharma-inc"
+            }
+          }
+        ],
+        "signature": [
+          {
+            "type": [
+              {
+                "system": "urn:iso-astm:E1762-95:2013",
+                "code": "1.2.840.10065.1.12.1.1"
+              }
+            ],
+            "when": "2025-06-29T18:15:00-04:00",
+            "who": {
+              "reference": "Organization/pharma-inc"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Provenance"
+      }
+    }
+  ]
+}

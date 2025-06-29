@@ -27,6 +27,34 @@
     "resource": [
       {
         "reference": {
+          "reference": "Bundle/1"
+        },
+        "name": "1",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/2"
+        },
+        "name": "2",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/3"
+        },
+        "name": "3",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "Bundle/4"
+        },
+        "name": "4",
+        "isExample": false
+      },
+      {
+        "reference": {
           "reference": "StructureDefinition/MyPatient"
         },
         "name": "MyPatient",
@@ -102,6 +130,24 @@
           "generation": "markdown",
           "name": "techsolutions.html",
           "sourceUrl": "techsolutions.html"
+        },
+        {
+          "title": "High Volume",
+          "generation": "markdown",
+          "name": "high-volume.html",
+          "sourceUrl": "high-volume.html"
+        },
+        {
+          "title": "Medium Volume",
+          "generation": "markdown",
+          "name": "medium-volume.html",
+          "sourceUrl": "medium-volume.html"
+        },
+        {
+          "title": "Low Volume",
+          "generation": "markdown",
+          "name": "low-volume.html",
+          "sourceUrl": "low-volume.html"
         },
         {
           "title": "API Interactions",

@@ -1,0 +1,118 @@
+{
+  "resourceType": "Bundle",
+  "id": "1",
+  "type": "transaction",
+  "entry": [
+    {
+      "fullUrl": "urn:uuid:task-004",
+      "resource": {
+        "resourceType": "Task",
+        "id": "task-004",
+        "status": "completed",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "http://hl7.org/fhir/task-code",
+              "code": "issue-decision",
+              "display": "Issue Decision Letter"
+            }
+          ]
+        },
+        "description": "Issuance of Decision Letter approving Type II variation for shelf life extension",
+        "for": {
+          "reference": "MedicinalProductDefinition/mpd-001"
+        },
+        "authoredOn": "2025-06-29T18:30:00-04:00",
+        "requester": {
+          "reference": "Organization/ema"
+        },
+        "owner": {
+          "reference": "Organization/pharma-inc"
+        }
+      },
+      "request": {
+        "method": "POST",
+        "url": "Task"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:doc-ref-002",
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "doc-ref-002",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "51851-4",
+              "display": "Administrative report"
+            }
+          ]
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/fhir+json",
+              "data": "eyJyZXNvdXJjZVR5cGUiOiJCdW5kbGUiLCJpZCI6ImRlY2lzaW9uLWxldHRlci1kb2MtMDAxIiwidHlwZSI6ImRvY3VtZW50IiwiZW50cnkiOlt7ImZ1bGxVcmwiOiJ1cm46dXVpZDpkZWNpc2lvbi1sZXR0ZXItY29tcC0wMDEiLCJyZXNvdXJjZSI6eyJyZXNvdXJjZVR5cGUiOiJDb21wb3NpdGlvbiIsImlkIjoiZGVjaXNpb24tbGV0dGVyLWNvbXAtMDAxIiwic3RhdHVzIjoiZmluYWwiLCJ0eXBlIjp7ImNvZGluZyI6W3sic3lzdGVtIjoiaHR0cDovL2xvaW5jLm9yZyIsImNvZGUiOiI1MTg1MS00IiwiZGlzcGxheSI6IkFkbWluaXN0cmF0aXZlIHJlcG9ydCJ9XX0sInRpdGxlIjoiVHlwZSBJSSBWYXJpYXRpb24gQXBwcm92YWwgRGVjaXNpb24gTGV0dGVyIiwiZGF0ZSI6IjIwMjUtMDYtMjlUMTg6MzA6MDAtMDQ6MDAiLCJhdXRob3IiOlt7InJlZmVyZW5jZSI6Ik9yZ2FuaXphdGlvbi9lbWEifV0sInNlY3Rpb24iOlt7InRpdGxlIjoiQXBwcm92YWwiLCJ0ZXh0Ijp7InN0YXR1cyI6ImdlbmVyYXRlZCIsImRpdiI6IjxkaXYgeG1sbnM9XCJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hodG1sXCI+VGhlIEV1cm9wZWFuIE1lZGljaW5lcyBBZ2VuY3kgKEVNQSkgYXBwcm92ZXMgdGhlIFR5cGUgSUkgdmFyaWF0aW9uIGZvciB0aGUgbW9ub2Nsb25hbCBhbnRpYm9keSwgZXh0ZW5kaW5nIHRoZSBzaGVsZiBsaWZlIGZyb20gMjQgdG8gMzYgbW9udGhzLCBlZmZlY3RpdmUgSnVuZSAyOSwgMjAyNS4gVGhlIHVwZGF0ZWQgZVBJIHN0b3JhZ2UgY29uZGl0aW9ucyAoMi04wrBDIGZvciAzNiBtb250aHMpIGFuZCBQUUkgc3RhYmlsaXR5IGRhdGEgYXJlIGFjY2VwdGVkIGJhc2VkIG9uIHRoZSBwcm92aWRlZCBkb2N1bWVudGF0aW9uIGFuZCByZXNwb25zZXMgdG8gdGhlIExpc3Qgb2YgUXVlc3Rpb25zLjwvZGl2PiJ9fV19fX1dfQ==",
+              "hash": "qZk+NkcGgWq6PiVxeFDCbJzQ2J0=/nE+3Y2c=",
+              "size": 1234,
+              "title": "Type II Variation Approval Decision Letter Document Bundle"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DocumentReference"
+      }
+    },
+    {
+      "fullUrl": "urn:uuid:provenance-004",
+      "resource": {
+        "resourceType": "Provenance",
+        "id": "provenance-004",
+        "target": [
+          {
+            "reference": "DocumentReference/doc-ref-002"
+          }
+        ],
+        "recorded": "2025-06-29T18:30:00-04:00",
+        "agent": [
+          {
+            "type": {
+              "coding": [
+                {
+                  "system": "http://hl7.org/fhir/provenance-participant-type",
+                  "code": "author"
+                }
+              ]
+            },
+            "who": {
+              "reference": "Organization/ema"
+            }
+          }
+        ],
+        "signature": [
+          {
+            "type": [
+              {
+                "system": "urn:iso-astm:E1762-95:2013",
+                "code": "1.2.840.10065.1.12.1.1"
+              }
+            ],
+            "when": "2025-06-29T18:30:00-04:00",
+            "who": {
+              "reference": "Organization/ema"
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Provenance"
+      }
+    }
+  ]
+}
