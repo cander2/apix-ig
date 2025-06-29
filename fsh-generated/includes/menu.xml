@@ -11,24 +11,65 @@
 
 <ul xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
   <li>
-    <a href="index.html">Home</a>
+    <a href="index.html">IG Home</a>
   </li>
   <li>
-    <a href="usecases.html">Use Cases</a>
+    <a href="background.html">Background</a>
   </li>
   <li>
-    <a href="workflowoverview.html">Workflow Overview</a>
+    <a href="gettingstarted.html">Getting Started</a>
   </li>
   <li>
-    <a href="termnology.html">Terminology</a>
+    <a href="apixcomponents.html">APIX Components</a>
   </li>
-  <li>
-    <a href="validation.html">Validation</a>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Use Cases
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="usecases.html">Use Cases</a>
+      </li>
+      <li>
+        <a href="shelflifeextension.html">Shelf Life Extension</a>
+      </li>
+      <li>
+        <a href="safetyupdate.html">Safety Update</a>
+      </li>
+    </ul>
+  </li>
+  <li class="dropdown">
+    <a data-toggle="dropdown" href="#" class="dropdown-toggle">Build and Exchange APIX Transactions
+      <b class="caret"></b>
+    </a>
+    <ul class="dropdown-menu">
+      <li>
+        <a href="buildapixtransaction.html">How to Build APIX Transactions</a>
+      </li>
+      <li>
+        <a href="workflowoverview.html">Workflow Overview</a>
+      </li>
+      <li>
+        <a href="techsolutions.html">Technical Solutions</a>
+      </li>
+      <li>
+        <a href="apiinteractions.html">API Interactions</a>
+      </li>
+      <li>
+        <a href="terminology.html">Terminology</a>
+      </li>
+      <li>
+        <a href="validation.html">Validation</a>
+      </li>
+    </ul>
   </li>
   <li>
     <a href="artifacts.html">Artifacts</a>
   </li>
   <li>
     <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
   </li>
 </ul>

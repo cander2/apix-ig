@@ -1,0 +1,9 @@
+# Executive Summary
+
+This scenario demonstrates a regulatory workflow using the **API Exchange IG** and **Structured Regulatory Correspondence IG** for a Type II variation to extend the shelf life of a monoclonal antibody from 24 to 36 months. The process involves five steps between PharmaInc and the European Medicines Agency (EMA), conducted via FHIR Transaction Bundles over RESTful APIs.
+
+1. **Submission**: PharmaInc submits a Transaction Bundle to the EMA’s FHIR server, including a `Task` requesting the variation, a `DocumentReference` with base64-encoded attachments (application form as a Collection Bundle, ePI Document Bundle for updated storage conditions, PQI Collection Bundle for stability data), and a `Provenance` for integrity.
+2. **Processing**: The EMA’s FHIR server receives, validates, and processes the submission, decoding base64 attachments to review the application form, ePI, and PQI data, preparing for a List of Questions (LoQ).
+3. **List of Questions**: The EMA sends a Transaction Bundle with a `Task`, a Collection Bundle containing a `Questionnaire` with 10 questions (2 administrative, 3 labeling, 5 CMC), and a `Provenance`, requesting PharmaInc’s response.
+4. **Response to LoQ**: PharmaInc responds with a Transaction Bundle containing a `Task`, a `QuestionnaireResponse` in a Collection Bundle (with a base64-encoded SVG for the container closure question and two-paragraph text for the degradation products question), and a `Provenance`.
+5. **Decision Letter**: The EMA approves the variation and sends a Transaction Bundle with a `Task`, a `DocumentReference` referencing a base64-encoded Document Bundle (containing a `Composition` for the Decision Letter), and a `Provenance`, confirming the shelf life extension effective June 29, 2025.

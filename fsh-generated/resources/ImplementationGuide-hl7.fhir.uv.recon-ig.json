@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/uv/recon-ig/ImplementationGuide/hl7.fhir.uv.recon-ig",
   "version": "0.1.0",
   "name": "ReconIG",
-  "title": "Regulatory Content Exchange",
+  "title": "Real-time Regulatory Content Streaming (R2CS)",
   "status": "draft",
   "publisher": "Gravitate Health Project",
   "contact": [
@@ -18,9 +18,10 @@
       ]
     }
   ],
+  "description": "Enables real-time, subsecond exchange of pharmaceutical regulatory data (e.g., drug labeling and drug quality) using FHIR and KAFKA streaming.",
   "packageId": "hl7.fhir.uv.recon-ig",
   "fhirVersion": [
-    "4.0.1"
+    "5.0.0"
   ],
   "definition": {
     "resource": [
@@ -30,7 +31,7 @@
         },
         "name": "MyPatient",
         "description": "An example profile of the Patient resource.",
-        "exampleBoolean": false
+        "isExample": false
       },
       {
         "reference": {
@@ -38,74 +39,130 @@
         },
         "name": "PatientExample",
         "description": "An example of a patient with a license to krill.",
-        "exampleCanonical": "http://hl7.org/fhir/uv/recon-ig/StructureDefinition/MyPatient"
+        "isExample": true,
+        "profile": [
+          "http://hl7.org/fhir/uv/recon-ig/StructureDefinition/MyPatient"
+        ]
       }
     ],
     "page": {
-      "nameUrl": "toc.html",
       "title": "Table of Contents",
       "generation": "html",
       "page": [
         {
-          "nameUrl": "index.html",
-          "title": "Home",
-          "generation": "markdown"
+          "title": "IG Home",
+          "generation": "markdown",
+          "name": "index.html",
+          "sourceUrl": "index.html"
         },
         {
-          "nameUrl": "usecases.html",
           "title": "Use Cases",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "usecases.html",
+          "sourceUrl": "usecases.html"
         },
         {
-          "nameUrl": "workflowoverview.html",
+          "title": "Background",
+          "generation": "markdown",
+          "name": "background.html",
+          "sourceUrl": "background.html"
+        },
+        {
+          "title": "Getting Started",
+          "generation": "markdown",
+          "name": "gettingstarted.html",
+          "sourceUrl": "gettingstarted.html"
+        },
+        {
+          "title": "APIX Components",
+          "generation": "markdown",
+          "name": "apixcomponents.html",
+          "sourceUrl": "apixcomponents.html"
+        },
+        {
+          "title": "How to Build APIX Transactions",
+          "generation": "markdown",
+          "name": "buildapixtransaction.html",
+          "sourceUrl": "buildapixtransaction.html"
+        },
+        {
           "title": "Workflow Overview",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "workflowoverview.html",
+          "sourceUrl": "workflowoverview.html"
         },
         {
-          "nameUrl": "terminology.html",
+          "title": "Safety Update",
+          "generation": "markdown",
+          "name": "safetyupdate.html",
+          "sourceUrl": "safetyupdate.html"
+        },
+        {
+          "title": "Technical Solution",
+          "generation": "markdown",
+          "name": "techsolutions.html",
+          "sourceUrl": "techsolutions.html"
+        },
+        {
+          "title": "API Interactions",
+          "generation": "markdown",
+          "name": "apiinteractions.html",
+          "sourceUrl": "apiinteractions.html"
+        },
+        {
+          "title": "Shelf Life Extension",
+          "generation": "markdown",
+          "name": "shelflifeextension.html",
+          "sourceUrl": "shelflifeextension.html"
+        },
+        {
           "title": "Terminology",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "terminology.html",
+          "sourceUrl": "terminology.html"
         },
         {
-          "nameUrl": "validation.html",
           "title": "Validation",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "validation.html",
+          "sourceUrl": "validation.html"
         },
         {
-          "nameUrl": "downloads.html",
           "title": "Downloads",
-          "generation": "markdown"
+          "generation": "markdown",
+          "name": "downloads.html",
+          "sourceUrl": "downloads.html"
         },
         {
-          "nameUrl": "examples.html",
-          "title": "Examples Overview",
-          "generation": "html",
-          "page": [
-            {
-              "nameUrl": "simpleExamples.html",
-              "title": "Simple Examples",
-              "generation": "html"
-            },
-            {
-              "nameUrl": "complexExamples.html",
-              "title": "Complex Examples",
-              "generation": "html"
-            }
-          ]
+          "title": "References",
+          "generation": "markdown",
+          "name": "references.html",
+          "sourceUrl": "references.html"
         }
-      ]
+      ],
+      "name": "toc.html",
+      "sourceUrl": "toc.html"
     },
     "parameter": [
       {
-        "code": "copyrightyear",
+        "code": {
+          "code": "copyrightyear",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
         "value": "2025+"
       },
       {
-        "code": "releaselabel",
+        "code": {
+          "code": "releaselabel",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
         "value": "ci-build"
       },
       {
-        "code": "path-history",
+        "code": {
+          "code": "path-history",
+          "system": "http://hl7.org/fhir/tools/CodeSystem/ig-parameters"
+        },
         "value": "http://hl7.org/fhir/uv/recon-ig/history.html"
       }
     ]

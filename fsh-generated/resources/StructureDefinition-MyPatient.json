@@ -5,7 +5,7 @@
   "name": "MyPatient",
   "status": "draft",
   "description": "An example profile of the Patient resource.",
-  "fhirVersion": "4.0.1",
+  "fhirVersion": "5.0.0",
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
