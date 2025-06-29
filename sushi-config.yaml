@@ -1,8 +1,8 @@
 id: hl7.fhir.uv.recon-ig
 canonical: http://hl7.org/fhir/uv/recon-ig
 name: ReconIG
-title: Real-time Regulatory Content Streaming (R2CS)
-description: Enables real-time, subsecond exchange of pharmaceutical regulatory data (e.g., drug labeling and drug quality) using FHIR and KAFKA streaming.
+title: API for the Exchange of Medicinal Product Information (APIX)
+description: A global standard for real-time, API-based exchange of biopharmaceutical regulatory information (e.g., drug labeling and drug quality).
 status: draft # draft | active | retired | unknown
 version: 0.1.0
 fhirVersion: 5.0.0 # https://www.hl7.org/fhir/valueset-FHIR-version.html
@@ -34,6 +34,12 @@ pages:
     title: Safety Update
   techsolutions.md:
     title: Technical Solution
+  high-volume.md:
+    title: High Volume
+  medium-volume.md:
+    title: Medium Volume
+  low-volume.md:
+    title: Low Volume
   apiinteractions.md:
     title: API Interactions
   shelflifeextension.md:
@@ -49,7 +55,6 @@ pages:
 
 
 menu:
-#  Table of Contents: toc.html
   IG Home: index.html
   Background: background.html
   Getting Started: gettingstarted.html
@@ -65,10 +70,13 @@ menu:
     API Interactions: apiinteractions.html
     Terminology: terminology.html
     Validation: validation.html
+  Technical Solutions:
+    Overview: techsolutions.html
+    Low Volume: low-volume.html
+    Medium Volume: medium-volume.html
+    High Volume: 
   Artifacts: artifacts.html
   Downloads: downloads.html
-  References: references.html
-
 
 instanceOptions:
  

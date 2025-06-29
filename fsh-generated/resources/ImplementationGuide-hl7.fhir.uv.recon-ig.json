@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/uv/recon-ig/ImplementationGuide/hl7.fhir.uv.recon-ig",
   "version": "0.1.0",
   "name": "ReconIG",
-  "title": "Real-time Regulatory Content Streaming (R2CS)",
+  "title": "API for the Exchange of Medicinal Product Information (APIX)",
   "status": "draft",
   "publisher": "Gravitate Health Project",
   "contact": [
@@ -18,7 +18,7 @@
       ]
     }
   ],
-  "description": "Enables real-time, subsecond exchange of pharmaceutical regulatory data (e.g., drug labeling and drug quality) using FHIR and KAFKA streaming.",
+  "description": "A global standard for real-time, API-based exchange of biopharmaceutical regulatory information (e.g., drug labeling and drug quality).",
   "packageId": "hl7.fhir.uv.recon-ig",
   "fhirVersion": [
     "5.0.0"
