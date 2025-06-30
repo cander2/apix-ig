@@ -6,7 +6,9 @@ This scenario is for a Type II variation to extend the shelf life of a biologic 
 
 **Figure 1: Flow diagram showing the 5 Step exchange between PharmaInc and the EMA, conducted via FHIR Transaction Bundles over RESTful APIs.**
 
-<img src="shelflifeextensionflow.svg" alt="5 step process for a shelf life extension" style="display: inline-block; vertical-align: middle; width: 100px; height: auto;" />
+<span style="display: inline-block; vertical-align: middle;">
+  <img src="shelflifeextensionflow.svg" alt="5 step process for a shelf life extension" style="width: 100px; height: auto;" />
+</span>
 
 ### Step 1: PharmaInc Submits Type II Variation
 
