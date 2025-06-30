@@ -1,12 +1,13 @@
-# Shelf Life Extension Variation Scenario
+This page outlines a scenario demonstrating the use of the **API Exchange IG** and **Structured Regulatory Correspondence IG** for a Type II variation submission to extend the shelf life of a biologic product.
 
-This page outlines a scenario demonstrating the use of the **API Exchange IG** and **Structured Regulatory Correspondence IG** for a Type II variation submission to extend the shelf life of a monoclonal antibody from 24 to 36 months. The scenario involves PharmaInc submitting the variation to the European Medicines Agency (EMA), an exchange of a List of Questions (LoQ) and responses, and the issuance of a Decision Letter, all via FHIR Transaction Bundles.
+### Scenario Overview
 
-## Scenario Overview
+This scenario is for a Type II variation to extend the shelf life of a biologic product from 24 to 36 months. The variation requires updates to labeling (ePI) and pharmaceutical quality (PQI) content. The submission, or `Transaction Bundle`, includes a `Task`, a `DocumentReference` with base64-encoded attachments (application form as a Collection Bundle, ePI Document Bundle, PQI Collection Bundle), and a `Provenance`. The EMA processes the `Transaction Bundle`, sends a `Transaction Bundle` back which includes a LoQ with 10 questions (2 administrative, 3 labeling, 5 CMC) as a `Questionnaire`. PharmaInc responds with a `Transaction Bundle` that includes a `QuestionnaireResponse` (including an SVG image and multi-paragraph text for specific answers). Finally, the EMA issues a Decision Letter `Document Bundle` within a final 'Transaction Bundle'. All exchanges use RESTful FHIR APIs per the API Exchange IG.
 
-PharmaInc submits a Type II variation to the EMA to extend the shelf life of an approved monoclonal antibody, requiring updates to labeling (ePI) and CMC data (PQI). The submission includes a `Task`, a `DocumentReference` with base64-encoded attachments (application form as a Collection Bundle, ePI Document Bundle, PQI Collection Bundle), and a `Provenance`. The EMA processes the submission, sends a LoQ with 10 questions (2 administrative, 3 labeling, 5 CMC) as a `Questionnaire`, PharmaInc responds with a `QuestionnaireResponse` (including an SVG image and multi-paragraph text for specific answers), and the EMA issues a Decision Letter as a base64-encoded Document Bundle. All exchanges use RESTful FHIR APIs per the API Exchange IG.
+**Figure 1: Flow diagram showing the 5 Step exchange between PharmaInc and the EMA, conducted via FHIR Transaction Bundles over RESTful APIs.**
+<img src="shelflifeextensionflow.svg" alt="5 step process for a shelf life extension" style="float: none;" style="max-width: 100%; height: auto;" />
 
-## Step 1: PharmaInc Submits Type II Variation
+### Step 1: PharmaInc Submits Type II Variation
 
 PharmaInc submits a Type II variation to extend the shelf life from 24 to 36 months via a Transaction Bundle to the EMA’s FHIR server (`https://ema.example.org/fhir`). The Bundle includes:
 - **Task**: Requests the variation, with PharmaInc as requester and EMA as owner.
@@ -247,7 +248,7 @@ PharmaInc submits a Type II variation to extend the shelf life from 24 to 36 mon
 }
 ```
 
-## Step 2: EMA Receives and Processes the Submission
+### Step 2: EMA Receives and Processes the Submission
 
 The EMA’s FHIR server receives the Transaction Bundle at `https://ema.example.org/fhir`, validates it per the API Exchange IG, and processes the resources:
 - **Task**: Logged as a variation request for `MedicinalProductDefinition/mpd-001`.
@@ -256,7 +257,7 @@ The EMA’s FHIR server receives the Transaction Bundle at `https://ema.example.
 
 The EMA prepares to send a List of Questions (LoQ). No new FHIR resources are created in this step.
 
-## Step 3: EMA Sends List of Questions
+### Step 3: EMA Sends List of Questions
 
 The EMA compiles a LoQ with 10 questions (2 administrative, 3 labeling, 5 CMC) in a `Questionnaire` resource within a Collection Bundle. The Transaction Bundle includes a `Task` (requesting responses), the `Questionnaire`, and a `Provenance`, sent to PharmaInc’s FHIR server (`https://pharma-inc.example.org/fhir`).
 
@@ -528,7 +529,7 @@ The EMA compiles a LoQ with 10 questions (2 administrative, 3 labeling, 5 CMC) i
 }
 ```
 
-## Step 4: PharmaInc Responds to List of Questions
+### Step 4: PharmaInc Responds to List of Questions
 
 PharmaInc’s FHIR server processes the LoQ, prepares a `QuestionnaireResponse` with answers to all 10 questions, and sends a Transaction Bundle to the EMA’s FHIR server (`https://ema.example.org/fhir`). For `cmc-4` (container closure system), the response includes a base64-encoded SVG image. For `cmc-5` (degradation products), the response includes two paragraphs. The Bundle includes a `Task` (indicating completion), the `QuestionnaireResponse`, and a `Provenance`.
 
@@ -758,7 +759,7 @@ PharmaInc’s FHIR server processes the LoQ, prepares a `QuestionnaireResponse` 
 }
 ```
 
-## Step 5: EMA Issues Decision Letter
+### Step 5: EMA Issues Decision Letter
 
 The EMA reviews PharmaInc’s LoQ responses and approves the variation. The Decision Letter is a Document Bundle with a `Composition`, encoded as base64 data in a `DocumentReference`. The Transaction Bundle includes a `Task`, the `DocumentReference`, and a `Provenance`, sent to PharmaInc’s FHIR server (`https://pharma-inc.example.org/fhir`).
 
