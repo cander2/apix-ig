@@ -36,7 +36,7 @@ pages:
     title: Technical Solution
   highvolume.md:
     title: High Volume
-  medium-olume.md:
+  mediumvolume.md:
     title: Medium Volume
   lowvolume.md:
     title: Low Volume
@@ -76,6 +76,7 @@ menu:
     High Volume: highvolume.html
   Artifacts: artifacts.html
   Downloads: downloads.html
+  References: references.html
 
 instanceOptions:
   manualSliceOrdering: true 
