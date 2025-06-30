@@ -17,9 +17,6 @@
     <a href="background.html">Background</a>
   </li>
   <li>
-    <a href="gettingstarted.html">Getting Started</a>
-  </li>
-  <li>
     <a href="apixcomponents.html">APIX Components</a>
   </li>
   <li class="dropdown">
@@ -50,9 +47,6 @@
         <a href="workflowoverview.html">Workflow Overview</a>
       </li>
       <li>
-        <a href="techsolutions.html">Technical Solutions</a>
-      </li>
-      <li>
         <a href="apiinteractions.html">API Interactions</a>
       </li>
       <li>
@@ -72,13 +66,13 @@
         <a href="techsolutions.html">Overview</a>
       </li>
       <li>
-        <a href="low-volume.html">Low Volume</a>
+        <a href="lowvolume.html">Low Volume</a>
       </li>
       <li>
-        <a href="medium-volume.html">Medium Volume</a>
+        <a href="mediumvolume.html">Medium Volume</a>
       </li>
       <li>
-        <a href="high-volume.html">High Volume</a>
+        <a href="highvolume.html">High Volume</a>
       </li>
     </ul>
   </li>
@@ -87,5 +81,8 @@
   </li>
   <li>
     <a href="downloads.html">Downloads</a>
+  </li>
+  <li>
+    <a href="references.html">References</a>
   </li>
 </ul>

@@ -22,8 +22,6 @@ pages:
     title: Use Cases
   background.md:
     title: Background
-  gettingstarted.md:
-    title: Getting Started
   apixcomponents.md:
     title: APIX Components
   buildapixtransaction.md:
@@ -57,7 +55,6 @@ pages:
 menu:
   IG Home: index.html
   Background: background.html
-  Getting Started: gettingstarted.html
   APIX Components: apixcomponents.html
   Use Cases:
     Use Cases: usecases.html

@@ -96,12 +96,6 @@
           "sourceUrl": "background.html"
         },
         {
-          "title": "Getting Started",
-          "generation": "markdown",
-          "name": "gettingstarted.html",
-          "sourceUrl": "gettingstarted.html"
-        },
-        {
           "title": "APIX Components",
           "generation": "markdown",
           "name": "apixcomponents.html",
@@ -134,20 +128,20 @@
         {
           "title": "High Volume",
           "generation": "markdown",
-          "name": "high-volume.html",
-          "sourceUrl": "high-volume.html"
+          "name": "highvolume.html",
+          "sourceUrl": "highvolume.html"
         },
         {
           "title": "Medium Volume",
           "generation": "markdown",
-          "name": "medium-volume.html",
-          "sourceUrl": "medium-volume.html"
+          "name": "mediumvolume.html",
+          "sourceUrl": "mediumvolume.html"
         },
         {
           "title": "Low Volume",
           "generation": "markdown",
-          "name": "low-volume.html",
-          "sourceUrl": "low-volume.html"
+          "name": "lowvolume.html",
+          "sourceUrl": "lowvolume.html"
         },
         {
           "title": "API Interactions",
