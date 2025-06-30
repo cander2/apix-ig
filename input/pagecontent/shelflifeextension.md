@@ -5,7 +5,7 @@ This page outlines a scenario demonstrating the use of the **API Exchange IG** a
 This scenario is for a Type II variation to extend the shelf life of a biologic product from 24 to 36 months. The variation requires updates to labeling (ePI) and pharmaceutical quality (PQI) content. The submission, or `Transaction Bundle`, includes a `Task`, a `DocumentReference` with base64-encoded attachments (application form as a Collection Bundle, ePI Document Bundle, PQI Collection Bundle), and a `Provenance`. The EMA processes the `Transaction Bundle`, sends a `Transaction Bundle` back which includes a LoQ with 10 questions (2 administrative, 3 labeling, 5 CMC) as a `Questionnaire`. PharmaInc responds with a `Transaction Bundle` that includes a `QuestionnaireResponse` (including an SVG image and multi-paragraph text for specific answers). Finally, the EMA issues a Decision Letter `Document Bundle` within a final 'Transaction Bundle'. All exchanges use RESTful FHIR APIs per the API Exchange IG.
 
 **Figure 1: Flow diagram showing the 5 Step exchange between PharmaInc and the EMA, conducted via FHIR Transaction Bundles over RESTful APIs.**
-<img src="shelflifeextensionflow.svg" alt="5 step process for a shelf life extension" style="float: none;" style="max-width: 100%; height: auto;" />
+<img src="shelflifeextensionflow.svg" alt="5 step process for a shelf life extension" style="float: none;" style="max-width: 70%; height: auto;" />
 
 ### Step 1: PharmaInc Submits Type II Variation
 
