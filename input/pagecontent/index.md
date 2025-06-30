@@ -2,9 +2,9 @@
 
 This IG enables the vision of reducing pharmaceutical regulatory transaction and processing timelines from days or hours to subsecond timelines, using digitization, automation, and streaming technologies.
 
-Inspired by the Uppsala Monitoring Centre's (UMC) [IDMP Request and Publish API IG](https://build.fhir.org/ig/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service/index.html) and the finance industry's real-time algorithmic systems ([Anderson, Algorri, Abernathy 2023](https://pubmed.ncbi.nlm.nih.gov/37619807/)), R2CS leverages HL7 FHIR and modern API based technologies to deliver automated, interoperable, and scalable data exchange for electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), pharmacovigilance, requests for information, and clinical trials.
+Inspired by the Uppsala Monitoring Centre's (UMC) [IDMP Request and Publish API IG](https://build.fhir.org/ig/Uppsala-Monitoring-Centre/WHO-UMC-IDMP-Service/index.html) and the finance industry's real-time algorithmic systems ([Anderson, Algorri, Abernathy 2023](https://pubmed.ncbi.nlm.nih.gov/37619807/)), APIX leverages HL7 FHIR and modern API based technologies to deliver automated, interoperable, and scalable data exchange for electronic Product Information (ePI), Pharmaceutical Quality Information (PQI), pharmacovigilance, requests for information, and clinical trials.
 
-R2CS addresses the need for modern, real-time regulatory processes by:
+APIX addresses the need for modern, real-time regulatory processes by:
 - **Streaming Data**: Using Kafka to stream FHIR Transaction Bundles and Dataset-JSON as NDJSON, achieving subsecond validation and processing.
 - **Automation**: Enabling algorithmic workflows for validation, routing, and analytics, akin to trading platforms.
 - **Interoperability**: Supporting global standards (HL7 FHIR, CDISC, ICH) for ePI, PQI, and clinical submissions.
@@ -12,7 +12,7 @@ R2CS addresses the need for modern, real-time regulatory processes by:
 
 ### Scope
 
-R2CS targets pharmaceutical regulatory affairs, enabling:
+APIX targets pharmaceutical regulatory affairs, enabling:
 - **Electronic Product Information (ePI)**: Drug labeling transactions.
 - **Pharmaceutical Quality Information (PQI)**: Pharmaceutical quality transactions transactions.
 - **Request for Information (RFI)**: Health authority questions to manufacturers, and manufacturers response back to the health authority.
@@ -23,7 +23,7 @@ This IG provides technical guidance, profiles, and examples for implementing rea
 
 ### Streaming Solution
 
-R2CS’s goal is to enable real-time streaming architecture, which processes FHIR Transaction Bundles with subsecond latency. 
+APIX’s goal is to enable real-time streaming architecture, which processes FHIR Transaction Bundles with subsecond latency. 
 
 **Figure 1: Anatomy of a Regulatory Application or Transaction on FHIR**
 <img src="transactionanatomy.png" alt="Components of the Regulatory Transaction Bundle" style="float: none;" style="max-width: 100%; height: auto;" />
@@ -40,7 +40,7 @@ For detailed implementation, including Kafka setup, code examples, and performan
 
 ### Use Case Examples
 
-R2CS supports key regulatory workflows:
+APIX supports key regulatory workflows:
 1. **ePI Submission Exchanges**: A pharma company streams an ePI Document Bundle to a regulator for real-time validation and regulatory review.
 2. **PQI Submission Exchanges**: A pharma company streams quality data to a lab to request a stability study and the lab streams the results back to the company. Or the company streams quality data to a regulator for real-time  validation and regulatory review.
 3. **Clinical Data Processing**: Clinical datasets are streamed for real-time processing.
@@ -61,6 +61,6 @@ R2CS supports key regulatory workflows:
 
 ### Contact
 
-Contact the R2CS project team or contribute via the [R2CS GitHub repository](https://github.com/cander2/recon-ig).
+Contact the APIX project team or contribute via the [APIX GitHub repository](https://github.com/cander2/recon-ig).
 
 *This IG is under active development. Feedback is welcome to shape its evolution.*

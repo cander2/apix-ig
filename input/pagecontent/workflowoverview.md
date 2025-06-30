@@ -1,6 +1,6 @@
 ### Overview
 
-The RECON workflow facilitates the exchange and orchestration of regulatory content, such as electronic Product Information (ePI) and Product Quality Information (PQI), between submitters (e.g., pharmaceutical companies) and regulators. The process leverages FHIR resources, primarily `Task`, `DocumentReference`, `Observation`, and `Provenance`, to manage submissions, processing, updates, and notifications. This guide outlines the workflow, sender/recipient identification, security considerations, and implementation details.
+The APIX workflow facilitates the exchange and orchestration of regulatory content, such as electronic Product Information (ePI) and Product Quality Information (PQI), between submitters (e.g., pharmaceutical companies) and regulators. The process leverages FHIR resources, primarily `Task`, `DocumentReference`, `Observation`, and `Provenance`, to manage submissions, processing, updates, and notifications. This guide outlines the workflow, sender/recipient identification, security considerations, and implementation details.
 
 ### Workflow Steps
 
@@ -11,7 +11,7 @@ The RECON workflow facilitates the exchange and orchestration of regulatory cont
      - A `Provenance` resource to document the submission’s origin and sender.  
      - Optional: Additional resources like `Composition` for structured ePI or `Organization` for sender/recipient details.  
    - **Endpoint**: The bundle is submitted via `POST` to `[base]`.  
-   - **Validation**: The server validates the bundle for FHIR conformance and RECON-specific constraints (e.g., required profiles).  
+   - **Validation**: The server validates the bundle for FHIR conformance and APIX-specific constraints (e.g., required profiles).  
    - **Response**: The server returns a `Bundle` with the created resources’ IDs and a `201 Created` status or an `OperationOutcome` for errors.
 
 2. **Processing**  
@@ -29,7 +29,7 @@ The RECON workflow facilitates the exchange and orchestration of regulatory cont
    - **Method**: A `Transaction Bundle` is submitted via `POST` to `[base]` with:  
      - An updated `Task` resource.  
      - Optional: Additional resources like `OperationOutcome` for comments or `DocumentReference` for revised ePI.  
-   - **Validation**: The server ensures the `Task` update adheres to RECON profiles and state transitions.
+   - **Validation**: The server ensures the `Task` update adheres to APIX profiles and state transitions.
 
 4. **Notification**  
    - **Action**: The submitter is notified of `Task` updates through:  
@@ -41,7 +41,7 @@ The RECON workflow facilitates the exchange and orchestration of regulatory cont
 
 ### Identifying Sender and Recipient
 
-To ensure proper routing and auditability, RECON transaction bundles must clearly identify the sender (submitter) and recipient (regulator) of the submission. This is achieved through FHIR resources and security mechanisms:
+To ensure proper routing and auditability, APIX transaction bundles must clearly identify the sender (submitter) and recipient (regulator) of the submission. This is achieved through FHIR resources and security mechanisms:
 
 - **Sender (Submitter)**:
   - **Task.requester**: References the `Organization` or `Practitioner` submitting the request (e.g., a pharmaceutical company).  
@@ -63,7 +63,7 @@ To ensure proper routing and auditability, RECON transaction bundles must clearl
   - All submissions must use HTTPS and OAuth 2.0 or SMART-on-FHIR authentication.  
   - The server validates that the authenticated sender matches the `Task.requester` and that only the `Task.owner` can process the task.
 
-For detailed resource constraints, see the [RECON Task Profile](https://build.fhir.org/ig/cander2/recon-ig/StructureDefinition-recon-task.html), [RECON Provenance Profile](https://build.fhir.org/ig/cander2/recon-ig/StructureDefinition-recon-provenance.html), and [RECON Organization Profile](https://build.fhir.org/ig/cander2/recon-ig/StructureDefinition-recon-organization.html).
+For detailed resource constraints, see the [APIX Task Profile](https://build.fhir.org/ig/cander2/APIX-ig/StructureDefinition-APIX-task.html), [APIX Provenance Profile](https://build.fhir.org/ig/cander2/APIX-ig/StructureDefinition-APIX-provenance.html), and [APIX Organization Profile](https://build.fhir.org/ig/cander2/APIX-ig/StructureDefinition-APIX-organization.html).
 
 ### Security and Privacy
 
@@ -82,14 +82,14 @@ For detailed resource constraints, see the [RECON Task Profile](https://build.fh
 
 ### Conformance and Extensibility
 
-- Implementers must adhere to RECON-specific FHIR profiles (see [StructureDefinition](https://build.fhir.org/ig/cander2/recon-ig/profiles.html)).  
+- Implementers must adhere to APIX-specific FHIR profiles (see [StructureDefinition](https://build.fhir.org/ig/cander2/APIX-ig/profiles.html)).  
 - Servers must publish a `CapabilityStatement` detailing supported operations, search parameters, and subscription channels.  
 - The workflow supports additional resources (e.g., `Composition` for structured ePI) and custom `Task.output` types.  
 - Future versions may include support for `MessageHeader` for complex message exchanges.
 
 ### Diagram
 
-The following UML sequence diagram illustrates the RECON workflow:
+The following UML sequence diagram illustrates the APIX workflow:
 
 ```mermaid
 sequenceDiagram
