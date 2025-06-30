@@ -34,11 +34,11 @@ pages:
     title: Safety Update
   techsolutions.md:
     title: Technical Solution
-  high-volume.md:
+  highvolume.md:
     title: High Volume
-  medium-volume.md:
+  medium-olume.md:
     title: Medium Volume
-  low-volume.md:
+  lowvolume.md:
     title: Low Volume
   apiinteractions.md:
     title: API Interactions
@@ -71,12 +71,11 @@ menu:
     Validation: validation.html
   Technical Solutions:
     Overview: techsolutions.html
-    Low Volume: low-volume.html
-    Medium Volume: medium-volume.html
-    High Volume: high-volume.html
+    Low Volume: lowvolume.html
+    Medium Volume: mediumvolume.html
+    High Volume: highvolume.html
   Artifacts: artifacts.html
   Downloads: downloads.html
 
 instanceOptions:
- 
   manualSliceOrdering: true 
