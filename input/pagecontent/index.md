@@ -28,7 +28,7 @@ APIX’s goal is to enable real-time streaming architecture, which processes FHI
 **Figure 1: Anatomy of a Regulatory Application or Transaction on FHIR**
 
 <span style="display: inline-block; vertical-align: middle;">
-  <img src="transactionanatomy.png" alt="Components of the Regulatory Transaction Bundle" style="width: 800px; height: auto;" />
+  <img src="transactionanatomy.svg" alt="Components of the Regulatory Transaction Bundle" style="width: 800px; height: auto;" />
 </span>
 
 This IG describes several technical solution options capable of supporting low, medium, or high transaction volumes. However, these are merely suggestions for discussion. Implementers are encouraged to select any FHIR compliant technical solution that suits their unique requirements and means. 
@@ -65,5 +65,3 @@ APIX supports key regulatory workflows:
 ### Contact
 
 Contact the APIX project team or contribute via the [APIX GitHub repository](https://github.com/cander2/recon-ig).
-
-*This IG is under active development. Feedback is welcome to shape its evolution.*
