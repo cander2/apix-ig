@@ -1,0 +1,21 @@
+{
+  "resourceType": "ValueSet",
+  "id": "apix-task-code",
+  "url": "http://example.com/fhir/ValueSet/apix-task-code",
+  "name": "ApixTaskCodeValueSet",
+  "title": "APIX Task Code Value Set",
+  "status": "draft",
+  "description": "Codes for regulatory task types.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://example.com/fhir/CodeSystem/apix-task-code",
+        "concept": [
+          { "code": "submit-variation" },
+          { "code": "review" },
+          { "code": "approve" }
+        ]
+      }
+    ]
+  }
+}

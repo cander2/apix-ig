@@ -1,0 +1,29 @@
+{
+  "resourceType": "DocumentReference",
+  "id": "apix-doc-001",
+  "status": "current",
+  "type": {
+    "coding": [
+      {
+        "system": "http://loinc.org",
+        "code": "55107-7",
+        "display": "Regulatory submission document"
+      }
+    ]
+  },
+  "content": [
+    {
+      "attachment": {
+        "contentType": "application/pdf",
+        "url": "http://example.com/docs/variation-report.pdf",
+        "title": "Variation Report"
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://example.com/fhir/StructureDefinition/SubmissionDate",
+      "valueDateTime": "2025-07-01"
+    }
+  ]
+}

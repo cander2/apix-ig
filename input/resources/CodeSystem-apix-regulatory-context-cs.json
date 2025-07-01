@@ -1,0 +1,14 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "apix-regulatory-context-cs",
+  "url": "http://example.com/fhir/CodeSystem/apix-regulatory-context",
+  "name": "ApixRegulatoryContext",
+  "title": "APIX Regulatory Context Code System",
+  "status": "draft",
+  "description": "Code system for regulatory contexts.",
+  "content": "complete",
+  "concept": [
+    { "code": "ema-submission", "display": "EMA Submission" },
+    { "code": "fda-submission", "display": "FDA Submission" }
+  ]
+}

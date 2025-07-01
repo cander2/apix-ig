@@ -1,0 +1,27 @@
+{
+  "resourceType": "ValueSet",
+  "id": "apix-document-type",
+  "url": "http://example.com/fhir/ValueSet/apix-document-type",
+  "name": "ApixDocumentTypeValueSet",
+  "title": "APIX Document Type Value Set",
+  "status": "draft",
+  "description": "Codes for regulatory document types.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://loinc.org",
+        "concept": [
+          { "code": "55107-7", "display": "Regulatory submission document" }
+        ]
+      },
+      {
+        "system": "http://example.com/fhir/CodeSystem/apix-document-type",
+        "concept": [
+          { "code": "SmPC" },
+          { "code": "PIL" },
+          { "code": "variation-report" }
+        ]
+      }
+    ]
+  }
+}

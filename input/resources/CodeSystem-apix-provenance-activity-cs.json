@@ -1,0 +1,15 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "apix-provenance-activity-cs",
+  "url": "http://example.com/fhir/CodeSystem/apix-provenance-activity",
+  "name": "ApixProvenanceActivity",
+  "title": "APIX Provenance Activity Code System",
+  "status": "draft",
+  "description": "Code system for provenance activities.",
+  "content": "complete",
+  "concept": [
+    { "code": "submission", "display": "Submission" },
+    { "code": "update", "display": "Update" },
+    { "code": "review", "display": "Review" }
+  ]
+}

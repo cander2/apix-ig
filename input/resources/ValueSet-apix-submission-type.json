@@ -1,0 +1,21 @@
+{
+  "resourceType": "ValueSet",
+  "id": "apix-submission-type",
+  "url": "http://example.com/fhir/ValueSet/apix-submission-type",
+  "name": "ApixSubmissionTypeValueSet",
+  "title": "APIX Submission Type Value Set",
+  "status": "draft",
+  "description": "Codes for types of regulatory submissions.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://example.com/fhir/CodeSystem/apix-submission-type",
+        "concept": [
+          { "code": "variation" },
+          { "code": "initial" },
+          { "code": "renewal" }
+        ]
+      }
+    ]
+  }
+}

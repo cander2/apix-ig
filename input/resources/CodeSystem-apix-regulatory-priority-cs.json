@@ -1,0 +1,14 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "apix-regulatory-priority-cs",
+  "url": "http://example.com/fhir/CodeSystem/apix-regulatory-priority",
+  "name": "ApixRegulatoryPriority",
+  "title": "APIX Regulatory Priority Code System",
+  "status": "draft",
+  "description": "Code system for regulatory priorities.",
+  "content": "complete",
+  "concept": [
+    { "code": "urgent", "display": "Urgent" },
+    { "code": "standard", "display": "Standard" }
+  ]
+}

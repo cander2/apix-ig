@@ -1,0 +1,80 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "apix-transaction-bundle-profile",
+  "url": "http://example.com/fhir/StructureDefinition/apix-transaction-bundle-profile",
+  "version": "1.0.0",
+  "name": "ApixTransactionBundleProfile",
+  "title": "APIX Transaction Bundle Profile",
+  "status": "draft",
+  "publisher": "APIX IG Project",
+  "description": "Profile for transaction bundles used in regulatory submissions.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Bundle",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Bundle",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Bundle.type",
+        "path": "Bundle.type",
+        "min": 1,
+        "fixedCode": "transaction"
+      },
+      {
+        "id": "Bundle.identifier",
+        "path": "Bundle.identifier",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "apix-bundle-identifier",
+            "severity": "error",
+            "human": "Identifier must include a regulatory submission ID",
+            "expression": "system = 'http://example.com/regulatory-submission-id'"
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry",
+        "path": "Bundle.entry",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "apix-bundle-entry",
+            "severity": "error",
+            "human": "Entries must include DocumentReference, Task, or Provenance",
+            "expression": "resource.resourceType in ('DocumentReference' | 'Task' | 'Provenance')"
+          }
+        ]
+      },
+      {
+        "id": "Bundle.entry.request.method",
+        "path": "Bundle.entry.request.method",
+        "min": 1,
+        "patternCode": "POST",
+        "constraint": [
+          {
+            "key": "apix-bundle-method",
+            "severity": "error",
+            "human": "Method must be POST or PUT",
+            "expression": "value in ('POST' | 'PUT')"
+          }
+        ]
+      },
+      {
+        "id": "Bundle.extension:submissionType",
+        "path": "Bundle.extension",
+        "sliceName": "submissionType",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": ["http://example.com/fhir/StructureDefinition/SubmissionType"]
+          }
+        ]
+      }
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "apix-submission-type-cs",
+  "url": "http://example.com/fhir/CodeSystem/apix-submission-type",
+  "name": "ApixSubmissionType",
+  "title": "APIX Submission Type Code System",
+  "status": "draft",
+  "description": "Code system for submission types.",
+  "content": "complete",
+  "concept": [
+    { "code": "variation", "display": "Variation" },
+    { "code": "initial", "display": "Initial Application" },
+    { "code": "renewal", "display": "Renewal" }
+  ]
+}

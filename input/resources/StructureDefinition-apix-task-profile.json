@@ -1,0 +1,73 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "apix-task-profile",
+  "url": "http://example.com/fhir/StructureDefinition/apix-task-profile",
+  "version": "1.0.0",
+  "name": "ApixTaskProfile",
+  "title": "APIX Task Profile",
+  "status": "draft",
+  "publisher": "APIX IG Project",
+  "description": "Profile for tasks managing regulatory submission workflows.",
+  "fhirVersion": "5.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Task",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Task",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Task.status",
+        "path": "Task.status",
+        "min": 1,
+        "constraint": [
+          {
+            "key": "apix-task-status",
+            "severity": "error",
+            "human": "Status must be requested, in-progress, completed, or cancelled",
+            "expression": "value in ('requested' | 'in-progress' | 'completed' | 'cancelled')"
+          }
+        ]
+      },
+      {
+        "id": "Task.intent",
+        "path": "Task.intent",
+        "min": 1,
+        "fixedCode": "order"
+      },
+      {
+        "id": "Task.focus",
+        "path": "Task.focus",
+        "min": 1,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": ["http://hl7.org/fhir/StructureDefinition/DocumentReference"]
+          }
+        ]
+      },
+      {
+        "id": "Task.code",
+        "path": "Task.code",
+        "min": 1,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://example.com/fhir/ValueSet/apix-task-code"
+        }
+      },
+      {
+        "id": "Task.extension:regulatoryPriority",
+        "path": "Task.extension",
+        "sliceName": "regulatoryPriority",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": ["http://example.com/fhir/StructureDefinition/RegulatoryPriority"]
+          }
+        ]
+      }
+    ]
+  }
+}

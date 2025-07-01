@@ -1,0 +1,15 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "apix-task-code-cs",
+  "url": "http://example.com/fhir/CodeSystem/apix-task-code",
+  "name": "ApixTaskCode",
+  "title": "APIX Task Code Code System",
+  "status": "draft",
+  "description": "Code system for task types.",
+  "content": "complete",
+  "concept": [
+    { "code": "submit-variation", "display": "Submit Variation" },
+    { "code": "review", "display": "Review Submission" },
+    { "code": "approve", "display": "Approve Submission" }
+  ]
+}

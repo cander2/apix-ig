@@ -1,0 +1,15 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "apix-document-type-cs",
+  "url": "http://example.com/fhir/CodeSystem/apix-document-type",
+  "name": "ApixDocumentType",
+  "title": "APIX Document Type Code System",
+  "status": "draft",
+  "description": "Code system for document types.",
+  "content": "complete",
+  "concept": [
+    { "code": "SmPC", "display": "Summary of Product Characteristics" },
+    { "code": "PIL", "display": "Patient Information Leaflet" },
+    { "code": "variation-report", "display": "Variation Report" }
+  ]
+}

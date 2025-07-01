@@ -27,6 +27,146 @@
     "resource": [
       {
         "reference": {
+          "reference": "CodeSystem/apix-document-type-cs"
+        },
+        "description": "Code system for document types.",
+        "name": "APIX Document Type Code System",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/apix-document-type"
+        },
+        "description": "Codes for regulatory document types.",
+        "name": "APIX Document Type Value Set",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/apix-document-reference-profile"
+        },
+        "description": "Profile for regulatory documents in API submissions.",
+        "name": "APIX DocumentReference Profile",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/apix-provenance-activity-cs"
+        },
+        "description": "Code system for provenance activities.",
+        "name": "APIX Provenance Activity Code System",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/apix-provenance-activity"
+        },
+        "description": "Codes for provenance activities.",
+        "name": "APIX Provenance Activity Value Set",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/apix-provenance-profile"
+        },
+        "description": "Profile for tracking origin and history of regulatory submission data.",
+        "name": "APIX Provenance Profile",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/apix-regulatory-context-cs"
+        },
+        "description": "Code system for regulatory contexts.",
+        "name": "APIX Regulatory Context Code System",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/apix-regulatory-priority-cs"
+        },
+        "description": "Code system for regulatory priorities.",
+        "name": "APIX Regulatory Priority Code System",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/apix-submission-type-cs"
+        },
+        "description": "Code system for submission types.",
+        "name": "APIX Submission Type Code System",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/apix-submission-type"
+        },
+        "description": "Codes for types of regulatory submissions.",
+        "name": "APIX Submission Type Value Set",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "CodeSystem/apix-task-code-cs"
+        },
+        "description": "Code system for task types.",
+        "name": "APIX Task Code Code System",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "ValueSet/apix-task-code"
+        },
+        "description": "Codes for regulatory task types.",
+        "name": "APIX Task Code Value Set",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/apix-task-profile"
+        },
+        "description": "Profile for tasks managing regulatory submission workflows.",
+        "name": "APIX Task Profile",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/apix-transaction-bundle-profile"
+        },
+        "description": "Profile for transaction bundles used in regulatory submissions.",
+        "name": "APIX Transaction Bundle Profile",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "DocumentReference/apix-doc-001"
+        },
+        "name": "apix-doc-001",
+        "isExample": true
+      },
+      {
+        "reference": {
+          "reference": "Provenance/apix-prov-001"
+        },
+        "name": "apix-prov-001",
+        "isExample": true
+      },
+      {
+        "reference": {
+          "reference": "Task/apix-task-001"
+        },
+        "name": "apix-task-001",
+        "isExample": true
+      },
+      {
+        "reference": {
+          "reference": "Bundle/apix-variation-bundle-001"
+        },
+        "name": "apix-variation-bundle-001",
+        "isExample": true
+      },
+      {
+        "reference": {
           "reference": "Bundle/Decision-Letter"
         },
         "name": "Decision-Letter",

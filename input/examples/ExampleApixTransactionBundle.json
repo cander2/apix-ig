@@ -1,0 +1,97 @@
+{
+  "resourceType": "Bundle",
+  "id": "apix-variation-bundle-001",
+  "type": "transaction",
+  "identifier": [
+    {
+      "system": "http://example.com/regulatory-submission-id",
+      "value": "SUB-2025-001"
+    }
+  ],
+  "entry": [
+    {
+      "resource": {
+        "resourceType": "DocumentReference",
+        "id": "apix-doc-001",
+        "status": "current",
+        "type": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "55107-7",
+              "display": "Regulatory submission document"
+            }
+          ]
+        },
+        "content": [
+          {
+            "attachment": {
+              "contentType": "application/pdf",
+              "url": "http://example.com/docs/variation-report.pdf",
+              "title": "Variation Report"
+            }
+          }
+        ],
+        "extension": [
+          {
+            "url": "http://example.com/fhir/StructureDefinition/SubmissionDate",
+            "valueDateTime": "2025-07-01"
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "DocumentReference"
+      }
+    },
+    {
+      "resource": {
+        "resourceType": "Task",
+        "id": "apix-task-001",
+        "status": "requested",
+        "intent": "order",
+        "code": {
+          "coding": [
+            {
+              "system": "http://example.com/fhir/CodeSystem/apix-task-code",
+              "code": "submit-variation"
+            }
+          ]
+        },
+        "focus": {
+          "reference": "DocumentReference/apix-doc-001"
+        },
+        "extension": [
+          {
+            "url": "http://example.com/fhir/StructureDefinition/RegulatoryPriority",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://example.com/fhir/CodeSystem/apix-regulatory-priority",
+                  "code": "standard"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "request": {
+        "method": "POST",
+        "url": "Task"
+      }
+    }
+  ],
+  "extension": [
+    {
+      "url": "http://example.com/fhir/StructureDefinition/SubmissionType",
+      "valueCodeableConcept": {
+        "coding": [
+          {
+            "system": "http://example.com/fhir/CodeSystem/apix-submission-type",
+            "code": "variation"
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "resourceType": "ValueSet",
+  "id": "apix-provenance-activity",
+  "url": "http://example.com/fhir/ValueSet/apix-provenance-activity",
+  "name": "ApixProvenanceActivityValueSet",
+  "title": "APIX Provenance Activity Value Set",
+  "status": "draft",
+  "description": "Codes for provenance activities.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://example.com/fhir/CodeSystem/apix-provenance-activity",
+        "concept": [
+          { "code": "submission" },
+          { "code": "update" },
+          { "code": "review" }
+        ]
+      }
+    ]
+  }
+}
