@@ -1,0 +1,44 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "RegulatoryPriority",
+  "url": "http://example.com/fhir/StructureDefinition/RegulatoryPriority",
+  "name": "RegulatoryPriority",
+  "title": "Regulatory Priority Extension",
+  "status": "draft",
+  "kind": "complex-type",
+  "type": "Extension",
+  "context": [
+    {
+      "type": "element",
+      "expression": "Task"
+    }
+  ],
+  "differential": {
+    "element": [
+      {
+        "id": "Extension",
+        "path": "Extension",
+        "min": 0,
+        "max": "1"
+      },
+      {
+        "id": "Extension.url",
+        "path": "Extension.url",
+        "fixedUri": "http://example.com/fhir/StructureDefinition/RegulatoryPriority"
+      },
+      {
+        "id": "Extension.value[x]",
+        "path": "Extension.value[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://example.com/fhir/CodeSystem/apix-regulatory-priority"
+        }
+      }
+    ]
+  }
+}
