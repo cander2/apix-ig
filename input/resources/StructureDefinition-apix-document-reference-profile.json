@@ -39,6 +39,12 @@
         ]
       },
       {
+        "id": "DocumentReference.content.attachment.url",
+        "path": "DocumentReference.content.attachment.url",
+        "min": 0,
+        "max": "0"
+      },
+      {
         "id": "DocumentReference.content.attachment.contentType",
         "path": "DocumentReference.content.attachment.contentType",
         "min": 1,
@@ -46,28 +52,30 @@
           {
             "key": "apix-doc-content-type",
             "severity": "error",
-            "human": "Content type must be application/pdf or text/html",
-            "expression": "value in ('application/pdf' | 'text/html')"
+            "human": "Content type must be application/pdf or application/json",
+            "expression": "value in ('application/pdf' | 'application/json')"
           }
         ]
       },
       {
-        "id": "DocumentReference.content.attachment.url",
-        "path": "DocumentReference.content.attachment.url",
+        "id": "DocumentReference.content.attachment.data",
+        "path": "DocumentReference.content.attachment.data",
         "min": 1
       },
       {
-        "id": "DocumentReference.extension:submissionDate",
-        "path": "DocumentReference.extension",
-        "sliceName": "submissionDate",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": ["http://example.com/fhir/StructureDefinition/SubmissionDate"]
-          }
-        ]
+        "id": "DocumentReference.content.attachment.size",
+        "path": "DocumentReference.content.attachment.size",
+        "min": 0
+      },
+      {
+        "id": "DocumentReference.content.attachment.hash",
+        "path": "DocumentReference.content.attachment.hash",
+        "min": 0
+      },
+      {
+        "id": "DocumentReference.content.attachment.title",
+        "path": "DocumentReference.content.attachment.title",
+        "min": 1
       }
     ]
   }

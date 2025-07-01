@@ -14,16 +14,12 @@
   "content": [
     {
       "attachment": {
-        "contentType": "application/pdf",
-        "url": "http://example.com/docs/variation-report.pdf",
-        "title": "Variation Report"
+        "contentType": "application/json",
+        "data": "base64 data placeholder",
+        "size": "1234",
+        "hash": "qZk+NkcGgWq6PiVxeFDCbJzQ2J0=/nE+3Y2c=",
+        "title": "Type II Variation Application Form Collection Bundle"
       }
-    }
-  ],
-  "extension": [
-    {
-      "url": "http://example.com/fhir/StructureDefinition/SubmissionDate",
-      "valueDateTime": "2025-07-01"
     }
   ]
 }
