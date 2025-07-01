@@ -123,7 +123,7 @@
                 },
                 {
                   "linkId": "cmc-1",
-                  "text": "Do stability studies cover all required environmental conditions for 36 months?",
+                  "text": "Are there any new stability studies conducted, or the submission includes only the data available from additional timepoints from previously submitted studies?",
                   "type": "string",
                   "extension": [
                     {
@@ -137,7 +137,7 @@
                 },
                 {
                   "linkId": "cmc-2",
-                  "text": "Are analytical methods validated for detecting degradation over 36 months?",
+                  "text": "Are there any new stability studies conducted, or the submission includes only the data available from additional timepoints from previously submitted studies?",
                   "type": "string",
                   "extension": [
                     {
@@ -151,7 +151,7 @@
                 },
                 {
                   "linkId": "cmc-3",
-                  "text": "Are new impurities identified in extended stability studies?",
+                  "text": "Are the test methods used the same as in the previously submitted stability information?",
                   "type": "string",
                   "extension": [
                     {
@@ -165,7 +165,7 @@
                 },
                 {
                   "linkId": "cmc-4",
-                  "text": "Is the container closure system validated for 36 months?",
+                  "text": " Are there any new degradation products identified within the newly submitted data? ",
                   "type": "string",
                   "extension": [
                     {
@@ -179,7 +179,7 @@
                 },
                 {
                   "linkId": "cmc-5",
-                  "text": "Are degradation products fully characterized for 36 months?",
+                  "text": "Any changes in the packaging configuration and/or storage of the samples during stability?",
                   "type": "string",
                   "extension": [
                     {
