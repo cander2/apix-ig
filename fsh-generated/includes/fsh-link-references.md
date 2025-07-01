@@ -21,4 +21,8 @@
 [List-Of-Questions-Response]: Bundle-List-Of-Questions-Response.html
 [MyPatient]: StructureDefinition-MyPatient.html
 [PatientExample]: Patient-PatientExample.html
+[RegulatoryContext]: StructureDefinition-RegulatoryContext.html
+[RegulatoryPriority]: StructureDefinition-RegulatoryPriority.html
+[SubmissionDate]: StructureDefinition-SubmissionDate.html
+[SubmissionType]: StructureDefinition-SubmissionType.html
 [Type-II-Variation]: Bundle-Type-II-Variation.html

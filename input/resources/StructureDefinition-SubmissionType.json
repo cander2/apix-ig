@@ -7,6 +7,8 @@
   "status": "draft",
   "kind": "complex-type",
   "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
   "context": [
     {
       "type": "element",

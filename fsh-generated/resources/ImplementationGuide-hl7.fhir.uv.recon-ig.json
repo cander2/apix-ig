@@ -207,6 +207,34 @@
       },
       {
         "reference": {
+          "reference": "StructureDefinition/RegulatoryContext"
+        },
+        "name": "Regulatory Context Extension",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/RegulatoryPriority"
+        },
+        "name": "Regulatory Priority Extension",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/SubmissionDate"
+        },
+        "name": "Submission Date Extension",
+        "isExample": false
+      },
+      {
+        "reference": {
+          "reference": "StructureDefinition/SubmissionType"
+        },
+        "name": "Submission Type Extension",
+        "isExample": false
+      },
+      {
+        "reference": {
           "reference": "Bundle/Type-II-Variation"
         },
         "name": "Type-II-Variation",
