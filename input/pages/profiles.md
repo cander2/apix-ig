@@ -7,7 +7,7 @@ The profiles support transaction-based submissions of regulatory data, including
 ## Profile: ApixTransactionBundleProfile
 
 - **Base Resource**: Bundle
-- **Description**: Represents a transaction bundle for regulatory submissions (e.g., variation applications) via API.
+- **Description**: Represents a transaction bundle for regulatory submissions (e.g., Market Authorization Application, Type II variation, Clinical Trial Application) via API.
 - **Constraints**:
   - `type`: Mandatory, fixed to `transaction`.
   - `entry`: Must include at least one `DocumentReference`, `Task`, or `Provenance`.
