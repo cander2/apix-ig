@@ -1,6 +1,6 @@
-[1]: Bundle-1.html
-[2]: Bundle-2.html
-[3]: Bundle-3.html
-[4]: Bundle-4.html
+[Decision-Letter]: Bundle-Decision-Letter.html
+[List-Of-Questions]: Bundle-List-Of-Questions.html
+[List-Of-Questions-Response]: Bundle-List-Of-Questions-Response.html
 [MyPatient]: StructureDefinition-MyPatient.html
 [PatientExample]: Patient-PatientExample.html
+[Type-II-Variation]: Bundle-Type-II-Variation.html

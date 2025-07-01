@@ -27,30 +27,23 @@
     "resource": [
       {
         "reference": {
-          "reference": "Bundle/1"
+          "reference": "Bundle/Decision-Letter"
         },
-        "name": "1",
+        "name": "Decision-Letter",
         "isExample": false
       },
       {
         "reference": {
-          "reference": "Bundle/2"
+          "reference": "Bundle/List-Of-Questions"
         },
-        "name": "2",
+        "name": "List-Of-Questions",
         "isExample": false
       },
       {
         "reference": {
-          "reference": "Bundle/3"
+          "reference": "Bundle/List-Of-Questions-Response"
         },
-        "name": "3",
-        "isExample": false
-      },
-      {
-        "reference": {
-          "reference": "Bundle/4"
-        },
-        "name": "4",
+        "name": "List-Of-Questions-Response",
         "isExample": false
       },
       {
@@ -71,6 +64,13 @@
         "profile": [
           "http://hl7.org/fhir/uv/recon-ig/StructureDefinition/MyPatient"
         ]
+      },
+      {
+        "reference": {
+          "reference": "Bundle/Type-II-Variation"
+        },
+        "name": "Type-II-Variation",
+        "isExample": false
       }
     ],
     "page": {
