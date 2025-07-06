@@ -1,0 +1,48 @@
+{
+    "resourceType": "Bundle",
+    "id": "080dccce-5749-450c-9a32-de423a05b360",
+    "meta": {
+      "lastUpdated": "2025-07-02T04:46:59.100+00:00"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [ {
+      "relation": "self",
+      "url": "http://localhost:8080/fhir/MedicinalProductDefinition?_pretty=true"
+    } ],
+    "entry": [ {
+      "fullUrl": "http://localhost:8080/fhir/MedicinalProductDefinition/3",
+      "resource": {
+        "resourceType": "MedicinalProductDefinition",
+        "id": "3",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:51.767+00:00",
+          "source": "#uWv5aQ4vBHUyQ2YS"
+        },
+        "identifier": [ {
+          "system": "http://example.org/medicinal-product-identifiers",
+          "value": "STELBAT-001"
+        } ],
+        "type": {
+          "coding": [ {
+            "system": "http://example.org/product-stages",
+            "code": "bulk"
+          } ]
+        },
+        "description": "Stelbat medicinal product for stability testing",
+        "combinedPharmaceuticalDoseForm": {
+          "coding": [ {
+            "system": "http://example.org/formulations",
+            "code": "Tablet formulation"
+          } ]
+        },
+        "name": [ {
+          "productName": "Stelbat"
+        } ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    } ]
+  }

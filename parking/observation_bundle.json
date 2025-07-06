@@ -1,0 +1,342 @@
+{
+    "resourceType": "Bundle",
+    "id": "81970fd6-c6be-48d8-99f4-ded818b0297b",
+    "meta": {
+      "lastUpdated": "2025-07-02T04:45:59.666+00:00"
+    },
+    "type": "searchset",
+    "total": 4,
+    "link": [ {
+      "relation": "self",
+      "url": "http://localhost:8080/fhir/Observation?_pretty=true"
+    } ],
+    "entry": [ {
+      "fullUrl": "http://localhost:8080/fhir/Observation/52",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "52",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2025-06-05T21:38:28.532+00:00",
+          "source": "#4Y23UT79vCEzmgO2",
+          "tag": [ {
+            "system": "http://example.org/fhir/tags",
+            "code": "cro-provided-result"
+          }, {
+            "system": "http://example.org/fhir/tags",
+            "code": "submitted-to-regulator"
+          } ]
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/test-protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/id-4"
+          }
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-timepoint",
+          "valueString": "timepoint_0"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-timepoint-title",
+          "valueString": "Initial"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/shared-with-sponsor",
+          "valueBoolean": true
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/parameter-results",
+          "valueString": "{\"test_name\": \"Dissolution (Mean)\", \"category\": \"Dissolution Values\", \"subcategory\": \"\", \"condition\": \"25\\u00b0C/60% RH\", \"timepoint\": \"Initial\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/criteria-results",
+          "valueString": "{\"meets_acceptance_criteria\": true}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/result-details",
+          "valueString": "{\"condition_title\": \"25\\u00b0C/60% RH\", \"timepoint_title\": \"Initial\", \"test_title\": \"Dissolution (Mean)\", \"test_category\": \"Dissolution Values\", \"test_subcategory\": \"\", \"test_description\": \"Physico-chemical properties\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/result-source",
+          "valueString": "cro"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submitted-to-regulator",
+          "valueBoolean": true
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submission-date",
+          "valueDateTime": "2025-06-05T21:38:28.529182"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submission-notes",
+          "valueString": "Submitted 4 CRO results for regulatory review"
+        } ],
+        "status": "final",
+        "category": [ {
+          "coding": [ {
+            "system": "http://example.org/fhir/observation-categories",
+            "code": "stability-test"
+          } ]
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/fhir/stability-tests",
+            "code": "19"
+          } ],
+          "text": "19"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "performer": [ {
+          "display": "mj"
+        } ],
+        "valueQuantity": {
+          "value": 12.0,
+          "unit": "mg"
+        },
+        "note": [ {
+          "text": "25°C/60% RH - Initial - Dissolution (Mean)"
+        } ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/Observation/53",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "53",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2025-06-05T21:38:28.598+00:00",
+          "source": "#GsSmwgys263TXKUr",
+          "tag": [ {
+            "system": "http://example.org/fhir/tags",
+            "code": "cro-provided-result"
+          }, {
+            "system": "http://example.org/fhir/tags",
+            "code": "submitted-to-regulator"
+          } ]
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/test-protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/id-4"
+          }
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-timepoint",
+          "valueString": "timepoint_0"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-timepoint-title",
+          "valueString": "Initial"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/shared-with-sponsor",
+          "valueBoolean": true
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/parameter-results",
+          "valueString": "{\"test_name\": \"Dissolution (Conclusion)\", \"category\": \"Dissolution Values\", \"subcategory\": \"\", \"condition\": \"25\\u00b0C/60% RH\", \"timepoint\": \"Initial\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/criteria-results",
+          "valueString": "{\"meets_acceptance_criteria\": true}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/result-details",
+          "valueString": "{\"condition_title\": \"25\\u00b0C/60% RH\", \"timepoint_title\": \"Initial\", \"test_title\": \"Dissolution (Conclusion)\", \"test_category\": \"Dissolution Values\", \"test_subcategory\": \"\", \"test_description\": \"Physico-chemical properties\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/result-source",
+          "valueString": "cro"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submitted-to-regulator",
+          "valueBoolean": true
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submission-date",
+          "valueDateTime": "2025-06-05T21:38:28.597096"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submission-notes",
+          "valueString": "Submitted 4 CRO results for regulatory review"
+        } ],
+        "status": "final",
+        "category": [ {
+          "coding": [ {
+            "system": "http://example.org/fhir/observation-categories",
+            "code": "stability-test"
+          } ]
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/fhir/stability-tests",
+            "code": "20"
+          } ],
+          "text": "20"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "performer": [ {
+          "display": "mj"
+        } ],
+        "valueQuantity": {
+          "value": 12.0,
+          "unit": "mg"
+        },
+        "note": [ {
+          "text": "25°C/60% RH - Initial - Dissolution (Conclusion)"
+        } ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/Observation/54",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "54",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2025-06-05T21:38:28.622+00:00",
+          "source": "#YpyFFPQtdp3qyTUi",
+          "tag": [ {
+            "system": "http://example.org/fhir/tags",
+            "code": "cro-provided-result"
+          }, {
+            "system": "http://example.org/fhir/tags",
+            "code": "submitted-to-regulator"
+          } ]
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/test-protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/id-4"
+          }
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-timepoint",
+          "valueString": "timepoint_1"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-timepoint-title",
+          "valueString": "3 months"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/shared-with-sponsor",
+          "valueBoolean": true
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/parameter-results",
+          "valueString": "{\"test_name\": \"Dissolution (Conclusion)\", \"category\": \"Dissolution Values\", \"subcategory\": \"\", \"condition\": \"25\\u00b0C/60% RH\", \"timepoint\": \"3 months\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/criteria-results",
+          "valueString": "{\"meets_acceptance_criteria\": true}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/result-details",
+          "valueString": "{\"condition_title\": \"25\\u00b0C/60% RH\", \"timepoint_title\": \"3 months\", \"test_title\": \"Dissolution (Conclusion)\", \"test_category\": \"Dissolution Values\", \"test_subcategory\": \"\", \"test_description\": \"Physico-chemical properties\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/result-source",
+          "valueString": "cro"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submitted-to-regulator",
+          "valueBoolean": true
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submission-date",
+          "valueDateTime": "2025-06-05T21:38:28.620076"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submission-notes",
+          "valueString": "Submitted 4 CRO results for regulatory review"
+        } ],
+        "status": "final",
+        "category": [ {
+          "coding": [ {
+            "system": "http://example.org/fhir/observation-categories",
+            "code": "stability-test"
+          } ]
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/fhir/stability-tests",
+            "code": "20"
+          } ],
+          "text": "20"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "performer": [ {
+          "display": "mj"
+        } ],
+        "valueQuantity": {
+          "value": 12.0,
+          "unit": "mg"
+        },
+        "note": [ {
+          "text": "25°C/60% RH - 3 months - Dissolution (Conclusion)"
+        } ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/Observation/55",
+      "resource": {
+        "resourceType": "Observation",
+        "id": "55",
+        "meta": {
+          "versionId": "2",
+          "lastUpdated": "2025-06-05T21:38:28.643+00:00",
+          "source": "#OEmSWBbbxO1BcMeE",
+          "tag": [ {
+            "system": "http://example.org/fhir/tags",
+            "code": "cro-provided-result"
+          }, {
+            "system": "http://example.org/fhir/tags",
+            "code": "submitted-to-regulator"
+          } ]
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/test-protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/id-4"
+          }
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-timepoint",
+          "valueString": "timepoint_1"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-timepoint-title",
+          "valueString": "3 months"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/shared-with-sponsor",
+          "valueBoolean": true
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/parameter-results",
+          "valueString": "{\"test_name\": \"Dissolution (Mean)\", \"category\": \"Dissolution Values\", \"subcategory\": \"\", \"condition\": \"25\\u00b0C/60% RH\", \"timepoint\": \"3 months\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/criteria-results",
+          "valueString": "{\"meets_acceptance_criteria\": true}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/result-details",
+          "valueString": "{\"condition_title\": \"25\\u00b0C/60% RH\", \"timepoint_title\": \"3 months\", \"test_title\": \"Dissolution (Mean)\", \"test_category\": \"Dissolution Values\", \"test_subcategory\": \"\", \"test_description\": \"Physico-chemical properties\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/result-source",
+          "valueString": "cro"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submitted-to-regulator",
+          "valueBoolean": true
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submission-date",
+          "valueDateTime": "2025-06-05T21:38:28.641157"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/submission-notes",
+          "valueString": "Submitted 4 CRO results for regulatory review"
+        } ],
+        "status": "final",
+        "category": [ {
+          "coding": [ {
+            "system": "http://example.org/fhir/observation-categories",
+            "code": "stability-test"
+          } ]
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/fhir/stability-tests",
+            "code": "19"
+          } ],
+          "text": "19"
+        },
+        "effectiveDateTime": "2025-06-05",
+        "performer": [ {
+          "display": "mj"
+        } ],
+        "valueQuantity": {
+          "value": 12.0,
+          "unit": "mg"
+        },
+        "note": [ {
+          "text": "25°C/60% RH - 3 months - Dissolution (Mean)"
+        } ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    } ]
+  }

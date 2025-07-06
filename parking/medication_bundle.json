@@ -1,0 +1,302 @@
+{
+    "resourceType": "Bundle",
+    "id": "d3e7cecd-ac49-4e7f-a2db-f14f82751070",
+    "meta": {
+      "lastUpdated": "2025-07-02T04:45:22.187+00:00"
+    },
+    "type": "searchset",
+    "total": 6,
+    "link": [ {
+      "relation": "self",
+      "url": "http://localhost:8080/fhir/Medication?_pretty=true"
+    } ],
+    "entry": [ {
+      "fullUrl": "http://localhost:8080/fhir/Medication/13",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "13",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:52.018+00:00",
+          "source": "#x3jr1hrsYz2TpPDK"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/batch-type",
+          "valueString": "DS"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/packaging-info",
+          "valueString": "Tablets - DS"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/medicinal-product",
+          "valueReference": {
+            "reference": "MedicinalProductDefinition/3",
+            "display": "Medicinal Product Definition"
+          }
+        } ],
+        "identifier": [ {
+          "system": "http://example.org/batch-identifiers",
+          "value": "000232445"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-batches",
+            "code": "stability-batch",
+            "display": "Stability Test Batch"
+          } ],
+          "text": "Stelbat DS Batch 000232445"
+        },
+        "status": "active",
+        "batch": {
+          "extension": [ {
+            "url": "http://example.org/fhir/StructureDefinition/manufacturing-date",
+            "valueDateTime": "2024-01-01"
+          } ],
+          "lotNumber": "000232445",
+          "expirationDate": "2026-12-31"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/Medication/14",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "14",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:52.041+00:00",
+          "source": "#BoweGs34kD40efe6"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/batch-type",
+          "valueString": "DS"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/packaging-info",
+          "valueString": "Tablets - DS"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/medicinal-product",
+          "valueReference": {
+            "reference": "MedicinalProductDefinition/3",
+            "display": "Medicinal Product Definition"
+          }
+        } ],
+        "identifier": [ {
+          "system": "http://example.org/batch-identifiers",
+          "value": "000232470"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-batches",
+            "code": "stability-batch",
+            "display": "Stability Test Batch"
+          } ],
+          "text": "Stelbat DS Batch 000232470"
+        },
+        "status": "active",
+        "batch": {
+          "extension": [ {
+            "url": "http://example.org/fhir/StructureDefinition/manufacturing-date",
+            "valueDateTime": "2024-01-01"
+          } ],
+          "lotNumber": "000232470",
+          "expirationDate": "2026-12-31"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/Medication/15",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "15",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:52.056+00:00",
+          "source": "#rP5Xw3SdYkjV3YW3"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/batch-type",
+          "valueString": "DS"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/packaging-info",
+          "valueString": "Tablets - DS"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/medicinal-product",
+          "valueReference": {
+            "reference": "MedicinalProductDefinition/3",
+            "display": "Medicinal Product Definition"
+          }
+        } ],
+        "identifier": [ {
+          "system": "http://example.org/batch-identifiers",
+          "value": "000232490"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-batches",
+            "code": "stability-batch",
+            "display": "Stability Test Batch"
+          } ],
+          "text": "Stelbat DS Batch 000232490"
+        },
+        "status": "active",
+        "batch": {
+          "extension": [ {
+            "url": "http://example.org/fhir/StructureDefinition/manufacturing-date",
+            "valueDateTime": "2024-01-01"
+          } ],
+          "lotNumber": "000232490",
+          "expirationDate": "2026-12-31"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/Medication/16",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "16",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:52.070+00:00",
+          "source": "#q6iU7jsInnxB13cG"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/batch-type",
+          "valueString": "DP"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/packaging-info",
+          "valueString": "Tablets - DP"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/medicinal-product",
+          "valueReference": {
+            "reference": "MedicinalProductDefinition/3",
+            "display": "Medicinal Product Definition"
+          }
+        } ],
+        "identifier": [ {
+          "system": "http://example.org/batch-identifiers",
+          "value": "000345667"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-batches",
+            "code": "stability-batch",
+            "display": "Stability Test Batch"
+          } ],
+          "text": "Stelbat DP Batch 000345667"
+        },
+        "status": "active",
+        "batch": {
+          "extension": [ {
+            "url": "http://example.org/fhir/StructureDefinition/manufacturing-date",
+            "valueDateTime": "2024-01-01"
+          } ],
+          "lotNumber": "000345667",
+          "expirationDate": "2026-12-31"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/Medication/17",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "17",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:52.085+00:00",
+          "source": "#GT3jliuvbryWWCYf"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/batch-type",
+          "valueString": "DP"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/packaging-info",
+          "valueString": "Tablets - DP"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/medicinal-product",
+          "valueReference": {
+            "reference": "MedicinalProductDefinition/3",
+            "display": "Medicinal Product Definition"
+          }
+        } ],
+        "identifier": [ {
+          "system": "http://example.org/batch-identifiers",
+          "value": "000321479"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-batches",
+            "code": "stability-batch",
+            "display": "Stability Test Batch"
+          } ],
+          "text": "Stelbat DP Batch 000321479"
+        },
+        "status": "active",
+        "batch": {
+          "extension": [ {
+            "url": "http://example.org/fhir/StructureDefinition/manufacturing-date",
+            "valueDateTime": "2024-01-01"
+          } ],
+          "lotNumber": "000321479",
+          "expirationDate": "2026-12-31"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/Medication/18",
+      "resource": {
+        "resourceType": "Medication",
+        "id": "18",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:52.102+00:00",
+          "source": "#V69kHsXqPQlMqr5c"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/batch-type",
+          "valueString": "DP"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/packaging-info",
+          "valueString": "Tablets - DP"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/medicinal-product",
+          "valueReference": {
+            "reference": "MedicinalProductDefinition/3",
+            "display": "Medicinal Product Definition"
+          }
+        } ],
+        "identifier": [ {
+          "system": "http://example.org/batch-identifiers",
+          "value": "000375192"
+        } ],
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-batches",
+            "code": "stability-batch",
+            "display": "Stability Test Batch"
+          } ],
+          "text": "Stelbat DP Batch 000375192"
+        },
+        "status": "active",
+        "batch": {
+          "extension": [ {
+            "url": "http://example.org/fhir/StructureDefinition/manufacturing-date",
+            "valueDateTime": "2024-01-01"
+          } ],
+          "lotNumber": "000375192",
+          "expirationDate": "2026-12-31"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    } ]
+  }

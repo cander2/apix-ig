@@ -1,0 +1,618 @@
+{
+    "resourceType": "Bundle",
+    "id": "68cd6bd3-6995-4386-8382-8158db6f7057",
+    "meta": {
+      "lastUpdated": "2025-07-02T04:44:44.705+00:00"
+    },
+    "type": "searchset",
+    "total": 16,
+    "link": [ {
+      "relation": "self",
+      "url": "http://localhost:8080/fhir/ObservationDefinition?_pretty=true"
+    } ],
+    "entry": [ {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/10",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "10",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:51.984+00:00",
+          "source": "#MWNbtBqbHZ8mr9TF"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Dissolution Values"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Physico-chemical properties"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Mean"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"Shall comply with the requirements of the harmonised USP/JP/Ph Eur Q=80% at 30 minutes\"}"
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "dissolution_(mean)",
+            "display": "Dissolution (Mean)"
+          } ],
+          "text": "Dissolution (Mean)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/11",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "11",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:51.995+00:00",
+          "source": "#PmIttShFPWhGPIRL"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Dissolution Values"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Physico-chemical properties"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Conclusion"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"Shall comply with the requirements of the harmonised USP/JP/Ph Eur Q=80% at 30 minutes\"}"
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "dissolution_(conclusion)",
+            "display": "Dissolution (Conclusion)"
+          } ],
+          "text": "Dissolution (Conclusion)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/12",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "12",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:52.006+00:00",
+          "source": "#tVJkwb2gFE9mlea4"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Microbial Quality"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Microbiological Properties"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"Shall comply with the requirements of the Ph Eur\"}"
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "microbial_quality",
+            "display": "Microbial Quality"
+          } ],
+          "text": "Microbial Quality"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/19",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "19",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:07:12.547+00:00",
+          "source": "#2Qi45gYASn713bEV"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Dissolution Values"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Physico-chemical properties"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Mean"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"Shall comply with the requirements of the harmonised USP/JP/Ph Eur Q=80% at 30 minutes\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/4"
+          }
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "dissolution_(mean)",
+            "display": "Dissolution (Mean)"
+          } ],
+          "text": "Dissolution (Mean)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/20",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "20",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:07:12.631+00:00",
+          "source": "#YKNOSEMyEZVA5T74"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Dissolution Values"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Physico-chemical properties"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Conclusion"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"Shall comply with the requirements of the harmonised USP/JP/Ph Eur Q=80% at 30 minutes\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/4"
+          }
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "dissolution_(conclusion)",
+            "display": "Dissolution (Conclusion)"
+          } ],
+          "text": "Dissolution (Conclusion)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/21",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "21",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:07:12.668+00:00",
+          "source": "#q95Y107xEi04MHQ0"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Microbial Quality"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Microbiological Properties"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"Shall comply with the requirements of the Ph Eur\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/4"
+          }
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "microbial_quality",
+            "display": "Microbial Quality"
+          } ],
+          "text": "Microbial Quality"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/22",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "22",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:07:12.693+00:00",
+          "source": "#AAKKMRtRWtNkSXgD"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Assay"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Assay"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"95% to 105% of label claim\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/4"
+          }
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "assay",
+            "display": "Assay"
+          } ],
+          "text": "Assay"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/23",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "23",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:07:12.725+00:00",
+          "source": "#OSh2K3VxRC96hI5W"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Degradation"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Purity & Impurities"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Degs1"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"NMT 0.2 % w/w\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/4"
+          }
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "degradation_(deg1)",
+            "display": "Degradation (Deg1)"
+          } ],
+          "text": "Degradation (Deg1)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/24",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "24",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:07:12.750+00:00",
+          "source": "#ehxHeSsm1vB05Sjd"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Degradation"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Purity & Impurities"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Degs2"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"NMT 0.3 % w/w\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/4"
+          }
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "degradation_(deg2)",
+            "display": "Degradation (Deg2)"
+          } ],
+          "text": "Degradation (Deg2)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/25",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "25",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:07:12.787+00:00",
+          "source": "#Viyfyij88rTTwKPj"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Degradation"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Purity & Impurities"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Degs3"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"NMT 0.3 % w/w\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/4"
+          }
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "degradation_(deg3)",
+            "display": "Degradation (Deg3)"
+          } ],
+          "text": "Degradation (Deg3)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/26",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "26",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:07:12.819+00:00",
+          "source": "#BGROTtkgEoRom94m"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Dissolution Values"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Physico-chemical properties"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Individual"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"Shall comply with the requirements of the harmonised USP/JP/Ph Eur Q=80% at 30 minutes\"}"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-reference",
+          "valueReference": {
+            "reference": "PlanDefinition/4"
+          }
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "dissolution_(individual)",
+            "display": "Dissolution (Individual)"
+          } ],
+          "text": "Dissolution (Individual)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/5",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "5",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:51.913+00:00",
+          "source": "#0NoTjrGkrOGwBD7o"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Assay"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Assay"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"95% to 105% of label claim\"}"
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "assay",
+            "display": "Assay"
+          } ],
+          "text": "Assay"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/6",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "6",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:51.926+00:00",
+          "source": "#DDlrsWVnEH99Dnbc"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Degradation"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Purity & Impurities"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Degs1"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"NMT 0.2 % w/w\"}"
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "degradation_(deg1)",
+            "display": "Degradation (Deg1)"
+          } ],
+          "text": "Degradation (Deg1)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/7",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "7",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:51.938+00:00",
+          "source": "#TiST3CGSF436JmjQ"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Degradation"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Purity & Impurities"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Degs2"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"NMT 0.3 % w/w\"}"
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "degradation_(deg2)",
+            "display": "Degradation (Deg2)"
+          } ],
+          "text": "Degradation (Deg2)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/8",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "8",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:51.952+00:00",
+          "source": "#DePmDQutbfDd6qdS"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Degradation"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Purity & Impurities"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Degs3"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"NMT 0.3 % w/w\"}"
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "degradation_(deg3)",
+            "display": "Degradation (Deg3)"
+          } ],
+          "text": "Degradation (Deg3)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    }, {
+      "fullUrl": "http://localhost:8080/fhir/ObservationDefinition/9",
+      "resource": {
+        "resourceType": "ObservationDefinition",
+        "id": "9",
+        "meta": {
+          "versionId": "1",
+          "lastUpdated": "2025-06-05T21:05:51.965+00:00",
+          "source": "#626sh4PYsnLUcbik"
+        },
+        "extension": [ {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-type",
+          "valueString": "Dissolution Values"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-description",
+          "valueString": "Physico-chemical properties"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-subtype",
+          "valueString": "Individual"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/stability-test-acceptance-criteria",
+          "valueString": "{\"Acceptance Criteria\": \"Shall comply with the requirements of the harmonised USP/JP/Ph Eur Q=80% at 30 minutes\"}"
+        } ],
+        "status": "active",
+        "code": {
+          "coding": [ {
+            "system": "http://example.org/stability-tests",
+            "code": "dissolution_(individual)",
+            "display": "Dissolution (Individual)"
+          } ],
+          "text": "Dissolution (Individual)"
+        }
+      },
+      "search": {
+        "mode": "match"
+      }
+    } ]
+  }

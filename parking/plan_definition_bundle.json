@@ -1,0 +1,1338 @@
+{
+    "resourceType": "Bundle",
+    "id": "f9cc2fcf-ad8a-4dd1-9704-b196d37e961d",
+    "meta": {
+      "lastUpdated": "2025-07-02T04:47:27.710+00:00"
+    },
+    "type": "searchset",
+    "total": 1,
+    "link": [ {
+      "relation": "self",
+      "url": "http://localhost:8080/fhir/PlanDefinition?_pretty=true"
+    } ],
+    "entry": [ {
+      "fullUrl": "http://localhost:8080/fhir/PlanDefinition/4",
+      "resource": {
+        "resourceType": "PlanDefinition",
+        "id": "4",
+        "meta": {
+          "versionId": "10",
+          "lastUpdated": "2025-06-05T21:10:44.961+00:00",
+          "source": "#ZqKnoUqQ7CQfKPrR",
+          "profile": [ "http://hl7.org/fhir/uv/pharm-quality/StructureDefinition/PlanDefinition-drug-pq" ]
+        },
+        "extension": [ {
+          "url": "http://hl7.org/fhir/uv/pharm-quality/StructureDefinition/Extension-container-orientation-pq",
+          "valueCodeableConcept": {
+            "coding": [ {
+              "system": "http://terminology.hl7.org/CodeSystem/container-orientation",
+              "code": "horizontal",
+              "display": "Horizontal"
+            } ],
+            "text": "Horizontal"
+          }
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/medicinal-product",
+          "valueReference": {
+            "reference": "MedicinalProductDefinition/3"
+          }
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/sponsor",
+          "valueString": "Default Sponsor"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/sponsor-id",
+          "valueString": "SPONSOR-DEFAULT"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/sharedDate",
+          "valueDateTime": "2025-06-05"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/protocol-deviations",
+          "valueString": "NA"
+        }, {
+          "url": "http://example.org/fhir/StructureDefinition/plan-definition-shared-organizations",
+          "extension": [ {
+            "url": null,
+            "valueReference": {
+              "reference": "Organization/2"
+            }
+          } ]
+        } ],
+        "identifier": [ {
+          "system": "http://example.org/stability/protocols",
+          "value": "STAB-STAB-682-STELB-DP"
+        } ],
+        "version": "1.0",
+        "title": "STAB-682-STELB-DP",
+        "status": "active",
+        "subjectReference": {
+          "reference": "MedicinalProductDefinition/3"
+        },
+        "date": "2025-06-05",
+        "description": "Evaluation of stability for Stelbat shelf life extension",
+        "action": [ {
+          "title": "25°C/60% RH",
+          "description": "Long-term storage condition",
+          "action": [ {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "Initial",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 0,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "3 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 3,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "6 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 6,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "9 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 9,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "12 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 12,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "18 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 18,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "24 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 24,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "36 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 36,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          } ]
+        }, {
+          "title": "30°C/75% RH",
+          "description": "Intermediate storage condition",
+          "action": [ {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "Initial",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 0,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "3 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 3,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "6 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 6,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "9 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 9,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "12 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 12,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "18 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 18,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "24 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 24,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "36 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 36,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          } ]
+        }, {
+          "title": "40°C/75% RH",
+          "description": "Accelerated storage condition",
+          "action": [ {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "Initial",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 0,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "3 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 3,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "6 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 6,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "9 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 9,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "12 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 12,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "18 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 18,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "24 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 24,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          }, {
+            "extension": [ {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/19"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/20"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/21"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/22"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/23"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/24"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/25"
+              }
+            }, {
+              "url": "observationDefinition",
+              "valueReference": {
+                "reference": "ObservationDefinition/26"
+              }
+            } ],
+            "title": "36 months",
+            "timingTiming": {
+              "repeat": {
+                "boundsDuration": {
+                  "value": 36,
+                  "unit": "month",
+                  "system": "http://unitsofmeasure.org"
+                }
+              }
+            }
+          } ]
+        } ]
+      },
+      "search": {
+        "mode": "match"
+      }
+    } ]
+  }
